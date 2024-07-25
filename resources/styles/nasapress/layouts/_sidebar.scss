@@ -1,0 +1,20 @@
+.usa-layout-docs-sidenav:not(.usa-width-one-fourth) {
+  margin-bottom: 1.5em;
+}
+.usa-layout-docs-sidenav-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.usa-sidenav-list > li {
+  font-size: 1.7rem;
+}
+
+$image-path: '~nasawds/dist/img';
+.usa-sidenav-list a {
+  cursor: pointer;
+  &.usa-external_link {
+    @include external-link(external-link-black, external-link);
+  }
+}
+$image-path: '../images';

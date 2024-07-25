@@ -1,0 +1,96 @@
+$font-path: '../fonts';
+$image-path: '../images';
+
+@mixin ie($bp) {
+  @media screen and (min-width: #{$bp}) and (-ms-high-contrast: none), (-ms-high-contrast: active)  {
+    /* IE10+ CSS styles go here */
+    @content;
+  }
+}
+
+html,
+body {
+  height: auto;
+}
+
+.usa-layout-docs {
+  // fixes known FF print bug caused by display: flex. https://bugzilla.mozilla.org/show_bug.cgi?id=939897
+// display: flex was used to move sidenav below main content, however we are using javascript to move it under leading paragraph so it's not needed.
+  display: block;
+  
+  height: auto;
+  //@include media($nav-width) {
+  //  margin-top: $header-height;
+  //}
+}
+
+.usa-layout-docs-main_content {
+  h2, h3, h4 {
+    color: $color-primary-darker;
+  }
+}
+
+.usa-heading {
+  color: $color-primary-darker;
+}
+
+.site-subheading, .usa-serif-body p.site-subheading { // higher specificity needed to override .usa-serif-body p styling in nasawds
+  @include h6;
+  @include font-smoothing;
+  font-family: $helvetica;
+  color: $color-gray;
+  display: block;
+  margin-bottom: 0.3rem;
+  margin-top: 0;
+  &.h2 {
+    margin-top: 5rem;
+  }
+}
+
+.site-subheading + * {
+  margin-top: 0px;
+} 
+
+main header {
+  > h1 {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+
+main figure {
+  //float: left;
+  //display: inline-block;
+  margin: 0px;
+}
+
+main figure:not(.gallery-item) {
+  img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}
+
+.fa-external-link {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.usa-logo, .usa-footer-logo {
+  // fixes nasa meatball in logo not scaling on ie 9-11.
+  // todo: move these to nasawds and remove from here.
+  /*
+   * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+   * [1] IE9
+   * [2] IE10+
+   */
+  // 1
+  img[src*=".svg"] {
+    width: 500px\9; 
+  }
+  // 2
+  @media screen and (min-width:0\0) {
+    img[src*=".svg"] {
+      width: 500px; 
+    }
+  }
+}

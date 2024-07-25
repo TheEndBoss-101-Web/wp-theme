@@ -1,0 +1,26 @@
+// Vendor -------------- //
+
+$font-path: '~nasawds/dist/fonts';
+$image-path: '~nasawds/dist/img';
+
+$z-nav-secondary: 10;
+
+// Typography
+// Removing the !default from $em-base so we are not inheriting that
+// value from Bourbon.
+$title-font-size:     5.9rem !default;
+
+$nav-width:           1095px;
+$site-max-width:      1060px;
+
+$header-height: 10.5rem;
+
+// minimum width of wp-admin bar at 32px high before becoming 46px high.
+$wp-admin-bar-width:          783px;
+$wp-admin-bar-height:         32px;
+$wp-admin-bar-mobile-height:  46px;
+
+$external-href:     '[href^="http"]:not([href*=".gov"])';
+
+
+
