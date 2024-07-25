@@ -10,7 +10,8 @@
         App\wpb_list_child_pages();
       } else {
         echo('<p class="usa-layout-docs-sidenav-title">On this page:</p>');
-        echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'"></nav>');
+        //echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'"></nav>');
+        echo('<nav class="anchorific" data-headings="h2,h3,h4"></nav>');
       }
       echo('</aside>');
     }

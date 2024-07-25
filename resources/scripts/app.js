@@ -1,7 +1,7 @@
 import domReady from '@roots/sage/client/dom-ready';
 import 'nasawds/src/js/uswds';
-import './vendor/anchorific';
-import './vendor/viewportchecker';
+//import './vendor/anchorific';
+//import './vendor/viewportchecker';
 import script from './script';
 
 /**

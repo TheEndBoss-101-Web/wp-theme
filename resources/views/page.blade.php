@@ -4,44 +4,13 @@
 <main class="usa-section">
   <div class="grid-container">
     <div class="grid-row grid-gap">
-      <div class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
-        <nav aria-label="Secondary navigation">
-          <ul class="usa-sidenav">
-            <li class="usa-sidenav__item">
-              <a href="javascript:void(0);">Parent link</a>
-            </li>
-            <li class="usa-sidenav__item">
-              <a href="javascript:void(0);" class="usa-current">Current page</a>
-              <ul class="usa-sidenav__sublist">
-                <li class="usa-sidenav__item">
-                  <a href="javascript:void(0);">Child link</a>
-                </li>
-                <li class="usa-sidenav__item">
-                  <a href="javascript:void(0);" class="usa-current">Child link</a>
-                  <ul class="usa-sidenav__sublist">
-                    <li class="usa-sidenav__item">
-                      <a href="javascript:void(0);">Grandchild link</a>
-                    </li>
-                    <li class="usa-sidenav__item">
-                      <a href="javascript:void(0);" class="usa-current">Grandchild link</a>
-                    </li>
-                    <li class="usa-sidenav__item">
-                      <a href="javascript:void(0);">Grandchild link</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="usa-sidenav__item">
-                  <a href="javascript:void(0);">Child link</a>
-                </li>
-              </ul>
-            </li>
-            <li class="usa-sidenav__item">
-              <a href="javascript:void(0);">Parent link</a>
-            </li>
-          </ul>
-        </nav>
+      <div id="desktop" class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
+        <p class="usa-layout-docs__sidenav-title">On this page:</p>
+        <?php echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'" aria-label="Secondary navigation"></nav>'); ?>
+        <?php //echo('<nav class="anchorific" data-headings="h2,h3,h4" aria-label="Secondary navigation"></nav>'); ?>
+        <!--nav class="anchorific" data-headings="h2,h3,h4" aria-label="Secondary navigation"></nav-->
       </div>
-      <main class="desktop:grid-col-9 usa-prose" id="main-content">
+      <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
         @include('partials.page-header')
         @includeFirst(['partials.content-page', 'partials.content'])
         <!--h1>Page heading (h1)</h1>
@@ -56,42 +25,7 @@
         <p>Read the full documentation on our side navigation on the component page.</p-->
       </main>
     </div>
-    <div class="usa-layout-docs__sidenav desktop:display-none">
-      <nav aria-label="Secondary navigation">
-        <ul class="usa-sidenav">
-          <li class="usa-sidenav__item">
-            <a href="javascript:void(0);">Parent link</a>
-          </li>
-          <li class="usa-sidenav__item">
-            <a href="javascript:void(0);" class="usa-current">Current page</a>
-            <ul class="usa-sidenav__sublist">
-              <li class="usa-sidenav__item">
-                <a href="javascript:void(0);">Child link</a>
-              </li>
-              <li class="usa-sidenav__item">
-                <a href="javascript:void(0);" class="usa-current">Child link</a>
-                <ul class="usa-sidenav__sublist">
-                  <li class="usa-sidenav__item">
-                    <a href="javascript:void(0);">Grandchild link</a>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="javascript:void(0);" class="usa-current">Grandchild link</a>
-                  </li>
-                  <li class="usa-sidenav__item">
-                    <a href="javascript:void(0);">Grandchild link</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="usa-sidenav__item">
-                <a href="javascript:void(0);">Child link</a>
-              </li>
-            </ul>
-          </li>
-          <li class="usa-sidenav__item">
-            <a href="javascript:void(0);">Parent link</a>
-          </li>
-        </ul>
-      </nav>
+    <div id="mobile" class="usa-layout-docs__sidenav desktop:display-none">
     </div>
   </div>
 </main>

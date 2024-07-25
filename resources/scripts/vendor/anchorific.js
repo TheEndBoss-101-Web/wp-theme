@@ -40,6 +40,7 @@ if ( typeof Object.create !== 'function' ) {
     names: [],
 
 		init: function( options, elem ) {
+			console.log('anchorific.init');
 			var self = this;
 
 			self.elem = elem;
@@ -72,6 +73,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		build: function() {
+			console.log('anchorific.build');
 			var self = this, obj, navigations = function() {};
 			// when navigation configuration is set
 			if ( self.opt.navigation ) {
@@ -99,6 +101,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		navigations: function( obj ) {
+			console.log('anchorific.navigations');
 			var self = this, link, list, which, name = self.name( obj );
 
 			if ( obj.attr( 'id' ) !== undefined )
@@ -116,6 +119,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		subheadings: function( which, a ) {
+			console.log('anchorific.subeadings');
 			var self = this, ul = $( self.opt.navigation ).find( 'ul' ),
 				li = $( self.opt.navigation ).find( 'li' );
 
@@ -133,6 +137,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		name: function( obj ) {
+			console.log('anchorific.name');
 			var name = obj.text().replace( /[^\w\s]/gi, '' )
 								.replace( /\s+/g, '-' )
 								.toLowerCase();
@@ -141,6 +146,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		anchor: function( obj ) {
+			console.log('anchorific.anchor');
 			var self = this, name = self.name( obj ), anchor, text = self.opt.anchorText,
 				klass = self.opt.anchorClass, id;
 
@@ -168,6 +174,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		back: function() {
+			console.log('anchorific.back');
 			var self = this, body = $( 'body, html' ), top = $( self.opt.top );
 
 			top.on( 'click', function( e ) {
@@ -180,6 +187,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		top: function( that ) {
+			console.log('anchorific.top');
 			var self = this, top = self.opt.top, back;
 
 			if ( top !== false ) {
@@ -190,6 +198,7 @@ if ( typeof Object.create !== 'function' ) {
 		},
 
 		spy: function() {
+			console.log('anchorific.spy');
 			var self = this, previous, current, list, top, prev;
 
 			$( window ).scroll( function( e ) {
