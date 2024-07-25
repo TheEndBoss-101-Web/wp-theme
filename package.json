@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "nasawds": "^4.0.64"
+    "nasawds": "^4.0.64",
+    "uswds": "^2.14.0"
   }
 }

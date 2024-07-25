@@ -6,6 +6,25 @@ import 'nasawds/src/js/uswds';
  */
 domReady(async () => {
   // ...
+  
+  var didScroll = false;
+  var topNav = $('header.usa-header');
+  window.onscroll = doThisStuffOnScroll;
+
+  function doThisStuffOnScroll() {
+    var scroll = $(window).scrollTop();
+    var scrollHeight = 55;
+
+    if (scroll >= scrollHeight) {
+      topNav.addClass('show-logo');
+    }
+    else {
+      topNav.removeClass('show-logo');
+    }
+
+    didScroll = true;
+  }
+
 });
 
 /**

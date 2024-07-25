@@ -41,7 +41,15 @@
     <div class="usa-navbar">
       <div class="usa-logo">
         <em class="usa-logo__text">
-          <a href="{{ esc_url(home_url('/')) }}" title="<Project title>">&lt;Project title&gt;</a>
+            <a href="{{ esc_url(home_url('/')) }}" accesskey="1" title="Home" aria-label="Home">
+
+             <!--div class="usa-logo" id="basic-logo">
+              <img alt="10 x home" width="72" height="36" src="@asset('images/logo-nasa.svg')">
+            </div-->
+              <img src="@asset('images/logo-nasa.svg')" alt="Site logo">
+              <span class="usa-logo-main-text">Project </span><br/>Title
+            </a>
+          <!--a href="{{ esc_url(home_url('/')) }}" title="<Project title>">&lt;Project title&gt;</a-->
         </em>
       </div>
       <button type="button" class="usa-menu-btn">Menu</button>
