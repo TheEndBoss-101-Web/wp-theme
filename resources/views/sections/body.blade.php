@@ -5,9 +5,9 @@
     @include('sections.header')
     <div class="usa-overlay"></div>
 
-    <main id="main-content">
+    <?php //<main id="main-content"> ?>
     @yield('content')
-    </main>
+    <?php //</main>?>
 
     @if (App\display_sidebar())
       <aside class="sidebar">
