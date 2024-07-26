@@ -19,6 +19,7 @@ $site-max-width:      1060px;
 $project-ln1:         1rem;
 $project-ln2:         2rem;
 
+// TODO: this is not working. i dont know why.
 .usa-header--advanced-name-logo {
   .usa-logo {
     img {
@@ -46,7 +47,7 @@ $project-ln2:         2rem;
       }
     }
   }
-
+  
   .usa-logo__text {
     a {
       font-weight: 700; //$ theme-font-weight-bold
@@ -62,27 +63,27 @@ $project-ln2:         2rem;
         }
       }
     }
-  }
+}
 
-  .usa-logo-main-text {
-    @media (min-width: $nav-width) {
-      font-size: $project-ln2;
-      line-height: 1;
-      transition: all .3s;
-      .show-logo & {
-        font-size: $project-ln2 - 0.8rem;
-      }
+.usa-logo-name {
+  padding-bottom: 50px;
+}
+
+.usa-logo-main-text {
+  @media (min-width: $nav-width) {
+    font-size: $project-ln2;
+    line-height: 1;
+    transition: all .3s;
+    .show-logo & {
+      font-size: $project-ln2 - 0.8rem;
     }
   }
+}
+}
 
-  .usa-logo-name {
-    padding-bottom: 50px;
-  }
-
-  .usa-header {
-    @media (min-width: $nav-width) {
-      width: 100%;
-    }
+.usa-header {
+  @media (min-width: $nav-width) {
+    width: 100%;
   }
 }
 

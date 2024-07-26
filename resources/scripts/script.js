@@ -30,7 +30,8 @@ export default {
         // Nav bar effects
       
         var didScroll = false;
-        var topNav = $('header.usa-header');
+        //var topNav = $('header.usa-header');
+        var topNav = $('body');
       
         window.onscroll = doThisStuffOnScroll;
       
@@ -40,8 +41,7 @@ export default {
         
           if (scroll >= scrollHeight) {
             topNav.addClass('show-logo');
-          }
-          else {
+          } else {
             topNav.removeClass('show-logo');
           }
         
