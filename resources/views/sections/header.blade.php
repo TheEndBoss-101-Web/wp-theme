@@ -2,7 +2,12 @@
   <p class="text-base"><strong>Start:</strong> header</p>
 @endif
 
-<header class="usa-header usa-header--basic{{ $header['UseDarkHeader'] ? ' usa-header--dark' : '' }}">
+<header class="usa-header {{
+  ($header['extended'] ? ' usa-header--extended' : ' usa-header--basic') . 
+  ($header['UseDarkHeader'] ? ' usa-header--dark' : '') . 
+  ($header['advanced_ProjectNameAndLogo'] ? ' usa-header--advanced-name-logo' : '') . 
+  ($header['extended'] == false && $header['megamenu'] == true ? ' usa-header--megamenu' : '')
+  }}">
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
@@ -27,18 +32,49 @@
           <img src="@asset('images/usa-icons/close.svg')" role="img" alt="Close" />
         @endif
       </button>
-      @php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array(
-            'container' => false,
-            'menu_class' => 'usa-nav__primary usa-accordion',
-            'theme_location' => 'primary_navigation',
-            'walker' => new App\NASAWDS_BasicHeader_NavWalker()
-          ));
+      @if ($header['megamenu'] == false)
+        @php
+          if (has_nav_menu('primary_navigation')) :
+            wp_nav_menu(array(
+              'container' => false,
+              'menu_class' => 'usa-nav__primary usa-accordion',
+              'theme_location' => 'primary_navigation',
+              'walker' => new App\NASAWDS_BasicHeader_NavWalker()
+            ));
 
-        endif;
-      @endphp
-      @include('forms.search')
+          endif;
+        @endphp
+      @else
+        @php
+          if (has_nav_menu('primary_navigation')) :
+            wp_nav_menu(array(
+              'container' => false,
+              'menu_class' => 'usa-nav__primary usa-accordion',
+              'theme_location' => 'primary_navigation',
+              'walker' => new App\NASAWDSMegaNavwalker()
+            ));
+          
+          endif;
+        @endphp
+      @endif
+      @if ($header['extended'] == true)
+        <div class="usa-nav__secondary">
+          @php
+            if (has_nav_menu('extended-header-secondary-links')) :
+              wp_nav_menu(array(
+                'container' => false,
+                'menu_class' => 'usa-nav__secondary-links',
+                'theme_location' => 'extended-header-secondary-links',
+                'walker' => new App\NASAWDS_ExtendedHeader_NavWalker()
+              ));
+            
+            endif;
+          @endphp
+          @include('forms.search')
+        </div>
+      @else
+        @include('forms.search')
+      @endif
     </nav>
   </div>
 </header>

@@ -31,13 +31,13 @@ class App extends Composer
                 'enabled' => true, // Whether the header is enabled
                 'advanced_ProjectNameAndLogo' => true, // Show an advanced project name and logo in the header
                 'UseDarkHeader' => true, // Use a dark theme for the header
-                'extended' => FALSE, // TODO: Implement support for an extended header layout
-                'megamenu' => FALSE, // TODO: Implement support for a megamenu
+                'extended' => false,
+                'megamenu' => true, // TODO: Implement support for a megamenu
             ],
             // Footer settings
             'footer' => [
                 'enabled' => true, // Whether the footer is enabled
-                'size' => 'med', // The size of the footer: 'big', 'med', or 'slim'. // TODO: Improve support for 'big' and 'slim' sizes
+                'size' => 'med', // The size of the footer: 'big', 'med', or 'slim'. // TODO: Improve support for 'big' size
             ],
             // Identifier settings
             'identifier' => [

@@ -12,17 +12,17 @@
   <div class="usa-footer__primary-section">
     <div class="usa-footer__primary-container grid-row">
       <div class="mobile-lg:grid-col-8">
-        <nav class="usa-footer__nav" aria-label="Footer navigation">
-          @php
-            wp_nav_menu(array(
-              'container' => false,
-              'menu_class' => 'grid-row grid-gap',
-              'depth' => 1,
-              'theme_location' => 'footer-primary',
-              'walker' => new App\NASAWDS_SlimFooter_NavWalker()
-            ));
-          @endphp
-        </nav>
+        @php
+          wp_nav_menu(array(
+            'container' => 'nav',
+            'container_class' => 'usa-footer__nav',
+            'container_aria_label' => 'Footer navigation',
+            'menu_class' => 'grid-row grid-gap',
+            'depth' => 1,
+            'theme_location' => 'footer-primary',
+            'walker' => new App\NASAWDS_SlimFooter_NavWalker()
+          ));
+        @endphp
       </div>
       <div class="mobile-lg:grid-col-4">
         <address class="usa-footer__address">
