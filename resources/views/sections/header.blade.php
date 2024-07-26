@@ -2,11 +2,7 @@
   <p class="text-base"><strong>Start:</strong> header</p>
 @endif
 
-@if ($header['UseDarkHeader'] == true)
-  <header class="usa-header--dark usa-header usa-header--basic">
-@else
-  <header class="usa-header usa-header--basic">
-@endif
+<header class="usa-header usa-header--basic{{ $header['UseDarkHeader'] ? ' usa-header--dark' : '' }}">
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
