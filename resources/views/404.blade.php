@@ -2,6 +2,10 @@
 
 @section('content')
 
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start Template:</strong> 404</p>
+@endif
+
 <div class="usa-section">
     <div class="grid-container">
         <div class="grid-row grid-gap">
@@ -62,5 +66,9 @@
         </div>
     </div>
 </div>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End Template:</strong> 404</p>
+@endif
 
 @endsection

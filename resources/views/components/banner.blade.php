@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> Banner</p>
+@endif
+
 <section class="usa-banner" aria-label="Official website of the United States government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
@@ -48,3 +52,7 @@
     </div>
   </div>
 </section>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> Banner</p>
+@endif

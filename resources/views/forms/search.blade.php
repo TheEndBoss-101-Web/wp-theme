@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> search</p>
+@endif
+
 <?php/*
 <form accept-charset="UTF-8" action="<?= get_site_url(); ?>/" id="search_form" method="get" class="usa-search usa-search-small js-search-form">
   <div role="search">
@@ -26,3 +30,7 @@
     </button>
   </form>
 </section>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>end:</strong> search</p>
+@endif

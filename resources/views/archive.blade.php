@@ -2,10 +2,11 @@
 
 @section('content')
 
-<main class="usa-grid usa-section usa-content usa-layout-docs" id="main-content">
-  
-  @if (!have_posts())
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start Template:</strong> archive</p>
+@endif
 
+@if ( !have_posts() )
   <div class="usa-width-one-whole alert alert-warning">
     <p class="usa-font-lead">
     {{ __('Sorry, this topic as no posts.', 'sage') }}
@@ -13,11 +14,17 @@
     <h3>Search this site:</h3>
     @include('forms.search', ['thisSite' => true])
   </div>
-
-  @else
-
-  <aside class="usa-width-one-fourth usa-layout-docs-sidenav sticky usa-serif-body"><p class='usa-layout-docs-sidenav-title'>On this page:</p><nav class='anchorific'></nav></aside>
-  <div class="usa-width-three-fourths usa-layout-docs-main_content">
+@else
+  <div class="usa-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div id="desktop" class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
+          <p class="usa-layout-docs__sidenav-title">On this page:</p>
+          <?php //echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'" aria-label="Secondary navigation"></nav>'); ?>
+          <?php echo('<nav class="anchorific" data-headings="h1,h2,h3,h4" aria-label="Secondary navigation"></nav>'); ?>
+          <!--nav class="anchorific" data-headings="h2,h3,h4" aria-label="Secondary navigation"></nav-->
+        </div>
+        <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
   @if (have_posts())
     @php
       $cat = get_category( get_query_var( 'cat' ) );
@@ -30,9 +37,16 @@
   @endwhile
 
   {!! get_the_posts_navigation() !!}
+        </main>
+      </div>
+      <div id="mobile" class="usa-layout-docs__sidenav desktop:display-none">
+      </div>
+    </div>
   </div>
+@endif
 
-  @endif
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End Template:</strong> archive</p>
+@endif
 
-</main>
 @endsection

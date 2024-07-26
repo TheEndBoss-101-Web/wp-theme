@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> head</p>
+@endif
+
 <head>
 
   <!-- Basic Page Needs
@@ -39,7 +43,6 @@
   <!-- get_header -->
   @php(do_action('get_header'))
   <!-- HOT -->
-  <!--script src="http://localhost/wp-content/themes/wp-theme/public/js/app.37839f.js" defer=""></script-->
   <?php /*
   @if (get_page_template_slug() == 'views/template-landing.blade.php')
     <style>
@@ -53,3 +56,7 @@
   @endif */ ?>
   
 </head>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> head</p>
+@endif

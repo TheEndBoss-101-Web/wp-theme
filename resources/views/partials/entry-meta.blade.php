@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> entry-meta</p>
+@endif
+
 <p class="post-meta">
 <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
 <span class="byline author vcard">
@@ -28,3 +32,7 @@
   <span>Posted in: {!! $category_crumbs !!}</span>
 @endif
 </p>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> entry-meta</p>
+@endif

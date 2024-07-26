@@ -23,9 +23,17 @@ class App extends Composer
     public function with()
     {
         return [
-            'debug' => [
-                'templatenames' => FALSE // boolian, Sometimes it can be helpfull to show the loading of templates
-            ]
+            'siteName' => $this->siteName(),
         ];
+    }
+
+    /**
+     * Returns the site name.
+     *
+     * @return string
+     */
+    public function siteName()
+    {
+        return get_bloginfo('name', 'display');
     }
 }

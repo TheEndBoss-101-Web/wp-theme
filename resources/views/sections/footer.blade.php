@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> footer</p>
+@endif
+
 <footer class="usa-footer">
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
@@ -75,3 +79,7 @@
     </div>
   </div>
 </footer>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> footer</p>
+@endif

@@ -1,8 +1,12 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> content</p>
+@endif
+
 <article @php(post_class())>
   <header>
     <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
     @if (get_post_type() == 'post')
-    @include('partials.entry-meta')
+      @include('partials.entry-meta')
     @endif
   </header>
   <div class="entry-summary usa-grid-full">
@@ -14,3 +18,7 @@
     @endif
   </div>
 </article>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> content</p>
+@endif

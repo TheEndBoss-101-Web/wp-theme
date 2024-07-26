@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> content-single</p>
+@endif
+
 <article @php(post_class())>
   <header>
     <h1 class="entry-title">{{ get_the_title() }}</h1>
@@ -12,3 +16,7 @@
   <?php //@php(comments_template('/partials/main.blade.php')) ?>
   @php(comments_template())
 </article>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> content-single</p>
+@endif

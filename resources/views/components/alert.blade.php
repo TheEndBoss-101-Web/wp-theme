@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> alert</p>
+@endif
+
 @props([
   'type' => null,
   'message' => null,
@@ -13,3 +17,7 @@
 <div {{ $attributes->merge(['class' => "px-2 py-1 {$class}"]) }}>
   {!! $message ?? $slot !!}
 </div>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> alert</p>
+@endif

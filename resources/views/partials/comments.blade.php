@@ -1,3 +1,7 @@
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>Start:</strong> comments</p>
+@endif
+
 @php
 if (post_password_required()) {
   return;
@@ -36,3 +40,7 @@ if (post_password_required()) {
 
   @php(comment_form())
 </section>
+
+@if ($debug['templatenames'] == true)
+  <p class="text-base"><strong>End:</strong> comments</p>
+@endif
