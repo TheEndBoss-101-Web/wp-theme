@@ -2,7 +2,7 @@
 
 @section('content')
 @if ( !get_field('otp_hide') )
-  <main class="usa-section">
+  <div class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div id="desktop" class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
@@ -29,7 +29,7 @@
       <div id="mobile" class="usa-layout-docs__sidenav desktop:display-none">
       </div>
     </div>
-  </main>
+  </div>
 @else
   <main class="usa-section" id="main-content">
     @include('partials.page-header')
