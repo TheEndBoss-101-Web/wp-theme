@@ -31,7 +31,7 @@ class App extends Composer
                 'enabled' => true, // Whether the header is enabled
                 'advanced_ProjectNameAndLogo' => true, // Show an advanced project name and logo in the header
                 'UseDarkHeader' => true, // Use a dark theme for the header
-                'extended' => true,
+                'extended' => false, // Enable the extended navigation menu
                 'megamenu' => false, // TODO: Implement support for a megamenu
             ],
             // Footer settings
