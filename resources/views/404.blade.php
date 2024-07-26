@@ -53,11 +53,7 @@
                     */ ?>
 
                     <p>Search this site:</p>
-                    <ul>
-                        <li>
-                            @include('forms.search')
-                        </li>
-                    </ul>
+                    @include('forms.search')
 
                     <!-- Error code if appropriate -->
                     <p class="text-base"><strong>Error code:</strong> 404</p>
