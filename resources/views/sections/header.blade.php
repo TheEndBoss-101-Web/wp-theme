@@ -2,7 +2,7 @@
   <p class="text-base"><strong>Start:</strong> header</p>
 @endif
 
-<header class="usa-header {{
+<header class="usa-header{{
   ($header['extended'] ? ' usa-header--extended' : ' usa-header--basic') . 
   ($header['UseDarkHeader'] ? ' usa-header--dark' : '') . 
   ($header['advanced_ProjectNameAndLogo'] ? ' usa-header--advanced-name-logo' : '') . 
