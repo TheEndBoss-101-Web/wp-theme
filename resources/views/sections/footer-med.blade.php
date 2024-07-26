@@ -6,33 +6,31 @@
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
   </div>
+  @if (has_nav_menu('footer-primary'))
   <div class="usa-footer__primary-section">
     <nav class="usa-footer__nav" aria-label="Footer navigation">
-      <ul class="grid-row grid-gap">
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">&lt;Primary link&gt;</a>
-        </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">&lt;Primary link&gt;</a>
-        </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">&lt;Primary link&gt;</a>
-        </li>
-        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
-          <a class="usa-footer__primary-link" href="javascript:void(0);">&lt;Primary link&gt;</a>
-        </li>
-      </ul>
+      @php
+        wp_nav_menu(array(
+          'container' => false,
+          'menu_class' => 'grid-row grid-gap',
+          'depth' => 1,
+          'theme_location' => 'footer-primary',
+          'walker' => new App\NASAWDS_MedFooter_NavWalker()
+        ));
+      @endphp
     </nav>
   </div>
+  @endif
+  <?php //TODO-CONFIG: Set the social links. ?>
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
           <div class="mobile-lg:grid-col-auto">
-            <img class="usa-footer__logo-img" src="@asset('images/logo-img.png')" alt="" />
+            <img class="usa-footer__logo-img" src="{{ $agency['logo'] }}" alt="{{ $agency['name'] }}'s logo" />
           </div>
           <div class="mobile-lg:grid-col-auto">
-            <p class="usa-footer__logo-heading">&lt;Name of Agency&gt;</p>
+            <p class="usa-footer__logo-heading">{{ $agency['name'] }}</p>
           </div>
         </div>
         <div class="usa-footer__contact-links mobile-lg:grid-col-6">
@@ -63,14 +61,14 @@
               </a>
             </div>
           </div>
-          <p class="usa-footer__contact-heading"> &lt;Agency Contact Center&gt; </p>
+          <p class="usa-footer__contact-heading"> {{ $agency['contact_center'] }} </p>
           <address class="usa-footer__address">
             <div class="usa-footer__contact-info grid-row grid-gap">
               <div class="grid-col-auto">
-                <a href="tel:1-800-555-5555">&lt;(800) 555-GOVT&gt;</a>
+                <a href="tel:{{ $agency['contact_pn_link'] }}">{{ $agency['contact_pn'] }}</a>
               </div>
               <div class="grid-col-auto">
-                <a href="mailto:info@agency.gov">&lt;info@agency.gov&gt;</a>
+                <a href="mailto:{{ $agency['contact_email'] }}">{{ $agency['contact_email'] }}</a>
               </div>
             </div>
           </address>

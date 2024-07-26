@@ -127,5 +127,8 @@ add_action('widgets_init', function () {
 // other
 require_once 'lib/App/acf-nasapress.php';
 require_once 'lib/App/child-navigation.php';
-require_once 'lib/App/NASAWDS_BasicNavWalker.php';
+require_once 'lib/App/NASAWDS_BasicHeader_NavWalker.php';
+require_once 'lib/App/NASAWDS_MedFooter_NavWalker.php';
+require_once 'lib/App/NASAWDS_SlimFooter_NavWalker.php';
+require_once 'lib/App/NASAWDS_Identifier_NavWalker.php';
 require_once 'lib/App/helpers.php';

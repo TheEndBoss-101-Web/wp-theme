@@ -4,9 +4,13 @@
 
 <body @php(body_class())>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-  @include('components.banner')
+  @if ($show_OfficialBanner == true)
+    @include('components.official_banner')
+  @endif
   @php(do_action('get_header'))
-  @include('sections.header')
+  @if ($header['enabled'] == true)
+    @include('sections.header')
+  @endif
   <div class="usa-overlay"></div>
 
   @yield('content') 
@@ -18,8 +22,20 @@
   @endif
 
   @php(do_action('get_footer'))
-  @include('sections.footer')
-  @include('sections.identifier')
+  @if ($footer['enabled'] == true)
+    @if ($footer['size'] == 'big')
+      @include('sections.footer-big')
+    @endif
+    @if ($footer['size'] == 'med')
+      @include('sections.footer-med')
+    @endif
+    @if ($footer['size'] == 'slim')
+      @include('sections.footer-slim')
+    @endif
+  @endif
+  @if ($identifier['enabled'] == true)
+    @include('sections.identifier')
+  @endif
   @php(wp_footer())
 </body>
 

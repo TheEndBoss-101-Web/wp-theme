@@ -1,6 +1,6 @@
 <?php
-
 namespace App;
+
 use Illuminate\Support\Str;
 
 /**
@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
  *
  * @see Walker_Nav_Menu
  */
-class NASAWDS_BasicNavWalker extends \Walker_Nav_Menu {
+class NASAWDS_BasicHeader_NavWalker extends \Walker_Nav_Menu {
 
     /**
      * Tracks if currently inside a submenu.

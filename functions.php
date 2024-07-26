@@ -65,3 +65,14 @@ collect(['setup', 'filters'])
         }
     }
 );
+
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            //TODO 'extended-header-secondary-links' => __( 'Extended Header Secondary Links' ),
+            'footer-primary' => __( 'Footer Primary' ),
+            'identifier-primary' => __( 'Identifier Primary' ),
+        )
+    );
+}
+add_action( 'init', 'register_my_menus' );
