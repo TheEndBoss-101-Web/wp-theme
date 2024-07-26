@@ -37,7 +37,7 @@ class App extends Composer
             // Footer settings
             'footer' => [
                 'enabled' => true, // Whether the footer is enabled
-                'size' => 'med', // The size of the footer: 'big', 'med', or 'slim'. // TODO: Improve support for 'big' size
+                'size' => 'slim', // The size of the footer: 'big', 'med', or 'slim'. // TODO: Improve support for 'big' size
             ],
             // Identifier settings
             'identifier' => [

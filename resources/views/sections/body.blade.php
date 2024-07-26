@@ -23,15 +23,7 @@
 
   @php(do_action('get_footer'))
   @if ($footer['enabled'] == true)
-    @if ($footer['size'] == 'big')
-      @include('sections.footer-big')
-    @endif
-    @if ($footer['size'] == 'med')
-      @include('sections.footer-med')
-    @endif
-    @if ($footer['size'] == 'slim')
-      @include('sections.footer-slim')
-    @endif
+    @include('sections.footer')
   @endif
   @if ($identifier['enabled'] == true)
     @include('sections.identifier')
