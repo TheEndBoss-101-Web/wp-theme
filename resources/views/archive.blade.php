@@ -21,8 +21,7 @@
         <div id="desktop" class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
           <p class="usa-layout-docs__sidenav-title">On this page:</p>
           <?php //echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'" aria-label="Secondary navigation"></nav>'); ?>
-          <?php echo('<nav class="anchorific" data-headings="h1,h2,h3,h4" aria-label="Secondary navigation"></nav>'); ?>
-          <!--nav class="anchorific" data-headings="h2,h3,h4" aria-label="Secondary navigation"></nav-->
+          <?php echo('<nav class="anchorific" data-headings="h2" aria-label="Secondary navigation"></nav>'); ?>
         </div>
         <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
   @if (have_posts())
