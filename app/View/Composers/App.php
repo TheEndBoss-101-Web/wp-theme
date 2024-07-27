@@ -54,7 +54,7 @@ class App extends Composer
             'officialBanner' => [
                 'enabled' => true, // Whether to display the banner
                 'dark' => false, // Use a dark theme for the banner
-                'icon' => @asset('images/us_flag_small.png'), // The icon of the banner.
+                'icon' => asset('images/us_flag_small.png'), // The icon of the banner.
             ],
 
             // Site-related settings
