@@ -54,7 +54,8 @@ $project-ln2:         2rem;
       font-weight: 700; //$ theme-font-weight-bold
       @media (min-width: $nav-width) {
         display: block;
-        width: 150%;
+        //width: 150%;
+        width: 100%;
         font-size: $project-ln1;
         line-height: 1.3;
         transition: font-size .3s, line-height .3s;
