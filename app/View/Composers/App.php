@@ -33,7 +33,7 @@ class App extends Composer
                 'UseDarkHeader' => true, // Use a dark theme for the header
                 'extended' => false, // Enable the extended navigation menu
                 'megamenu' => false, // TODO: Implement support for a megamenu
-                'fixedbox' => true, // This will place the header and the official domain banner in a fixed box.
+                'fixedbox' => true, // This will place the header in a fixed box.
                     // ! FLEXBOX MUST BE ENABLED FOR BELOW VALUES ! \\
                     ////'clearBG' => true, // This will make the background of the header clear. // * Best used with dark header.
                     'fadeBG' => true, // On scroll this will make the background fade.
@@ -51,7 +51,10 @@ class App extends Composer
                 'taxpayer_disclaimer' => false, // Whether to show the taxpayer disclaimer
                 'showusagov' => false, // Whether to show the USA.gov banner
             ],
-            'show_OfficialBanner' => true, // Whether to display the official domain banner
+            'officialBanner' => [
+                'enabled' => true, // Whether to display the official domain banner
+                'dark' => true,
+            ],
 
             // Site-related settings
             'site' => [

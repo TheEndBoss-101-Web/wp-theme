@@ -1,9 +1,29 @@
 .usa-banner--dark {
-    background-color: #1b1b1b;
-    color: #ffff;
-    .usa-banner__button-text {
-        color: #71767a;
-    }
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+  .usa-accordion  {
+    color: #f0f0f0;
+  }
+  .usa-banner__content, .usa-banner__header, .usa-footer__contact-info a, .usa-footer__secondary-section a {
+    color: #f0f0f0;
+  }
+  .usa-banner__button {
+    color: #71767a;
+  }
+  .usa-banner__button-text {
+    color: #71767a;
+    //background-color: #71767a;
+  }
+  .usa-banner__button:active, .usa-banner__button:hover {
+    color: #565c65;
+  }
+  .usa-banner__button:after {
+    color: #71767a;
+  }
+  .usa-banner__button[aria-expanded=true]:after {
+    color: #565c65;
+    background-color: #565c65;
+  }
 }
 
 .fixed-box {

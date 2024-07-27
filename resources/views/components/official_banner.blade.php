@@ -2,7 +2,9 @@
   <p class="text-base"><strong>Start:</strong> Banner</p>
 @endif
 
-<section class="usa-banner" aria-label="Official website of the {{ $site['government'] }} government">
+<section class="usa-banner{{
+  ($officialBanner['dark'] ? ' usa-banner--dark' : '')
+  }}" aria-label="Official website of the {{ $site['government'] }} government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">

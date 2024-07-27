@@ -9,7 +9,7 @@
     <div class="fixed-box">
   @endif
 
-  @if ($show_OfficialBanner == true)
+  @if ($officialBanner['enabled'] == true)
     @include('components.official_banner')
   @endif
 
