@@ -19,7 +19,6 @@ $site-max-width:      1060px;
 $project-ln1:         1rem;
 $project-ln2:         2rem;
 
-// TODO: this is not working. i dont know why.
 .usa-header--advanced-name-logo {
   .usa-logo {
     img {
@@ -63,30 +62,43 @@ $project-ln2:         2rem;
         }
       }
     }
-}
+  }
 
-.usa-logo-name {
-  padding-bottom: 50px;
-}
+  .usa-logo-name {
+    padding-bottom: 50px;
+  }
 
-.usa-logo-main-text {
-  @media (min-width: $nav-width) {
-    font-size: $project-ln2;
-    line-height: 1;
-    transition: all .3s;
-    .show-logo & {
-      font-size: $project-ln2 - 0.8rem;
+  .usa-logo-main-text {
+    @media (min-width: $nav-width) {
+      font-size: $project-ln2;
+      line-height: 1;
+      transition: all .3s;
+      .show-logo & {
+        font-size: $project-ln2 - 0.8rem;
+      }
     }
   }
 }
-}
 
 .usa-header {
-  @media (min-width: $nav-width) {
-    width: 100%;
-  }
+  background-color: white;
+  //transition: background .3s;
+  transition: all .3s;
 }
 
+.usa-header--dark {
+  background-color: #1b1b1b;
+}
+
+.fixed-box {
+  z-index: 7000;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  .admin-bar & {
+    top: var(--wp-admin--admin-bar--height);
+  }
+}
 
 //.usa-banner {
 //  //@include media($nav-width) {

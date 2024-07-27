@@ -4,13 +4,19 @@
 
 <body @php(body_class())>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+  @if ($header['fixedbox'] == true)<div class="fixed-box">@endif
+
   @if ($show_OfficialBanner == true)
     @include('components.official_banner')
   @endif
+
   @php(do_action('get_header'))
+  
   @if ($header['enabled'] == true)
     @include('sections.header')
   @endif
+
+  @if ($header['fixedbox'] == true)</div>@endif
   <div class="usa-overlay"></div>
 
   @yield('content') 
