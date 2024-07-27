@@ -35,7 +35,7 @@ class App extends Composer
                 'megamenu' => false, // TODO: Implement support for a megamenu
                 'fixedbox' => true, // This will place the header and the official domain banner in a fixed box.
                     // ! FLEXBOX MUST BE ENABLED FOR BELOW VALUES ! \\
-                    'clearBG' => true, // This will make the background of the header clear. // * Best used with dark header.
+                    ////'clearBG' => true, // This will make the background of the header clear. // * Best used with dark header.
                     'fadeBG' => true, // On scroll this will make the background fade.
             ],
             // Footer settings
@@ -93,6 +93,15 @@ class App extends Composer
                 'logo' => asset('images/circle-gray-20.svg'), // Path to the second parent agency's logo image
             ],
         );
+
+
+
+
+
+
+
+        // ! DO NOT EDIT BELOW ! \\
+        $toreturn['header']['clearBG'] = false;
         return $toreturn;
     }
 }

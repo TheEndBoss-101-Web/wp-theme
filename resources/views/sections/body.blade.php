@@ -4,7 +4,10 @@
 
 <body @php(body_class())>
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
-  @if ($header['fixedbox'] == true)<div class="fixed-box">@endif
+  @if ($header['fixedbox'] == true)
+    <div class="fixed-box--cover"></div>
+    <div class="fixed-box">
+  @endif
 
   @if ($show_OfficialBanner == true)
     @include('components.official_banner')

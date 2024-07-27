@@ -8,6 +8,8 @@
 @import "../../node_modules/uswds/src/stylesheets/settings/settings-utilities";
 @import "../../node_modules/uswds/src/stylesheets/settings/settings-components";
 
+@import "./theme";
+
 .fa-external-link {
   font-size: 12px;
   margin-left: 5px;
@@ -90,16 +92,6 @@ $project-ln2:         2rem;
   background-color: #1b1b1b;
 }
 
-.fixed-box {
-  z-index: 7000;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  .admin-bar & {
-    top: var(--wp-admin--admin-bar--height);
-  }
-}
-
 //.usa-banner {
 //  //@include media($nav-width) {
 //  @media (min-width: $nav-width) {
@@ -112,4 +104,12 @@ $project-ln2:         2rem;
 .usa-layout-docs__sidenav-title {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.usa-nav__secondary-links a {
+  color: #71767a;
+  display: inline-block;
+  font-size: .93rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }

@@ -1,0 +1,28 @@
+.usa-banner--dark {
+    background-color: #1b1b1b;
+    color: #ffff;
+    .usa-banner__button-text {
+        color: #71767a;
+    }
+}
+
+.fixed-box {
+  z-index: 7000;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  .admin-bar & {
+    top: var(--wp-admin--admin-bar--height);
+  }
+}
+
+.fixed-box--cover {
+    position: absolute;
+    //position: fixed;
+    //background-color: rgb(27,27,27);
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+    height: 8rem;
+    //position: static;
+}

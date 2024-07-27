@@ -54,10 +54,24 @@
   <!-- todo-config -->
   <script async id="_fed_an_ua_tag" type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&amp;subagency=MY-SUBAGENCY&amp;dclink=true&amp;yt=true&amp;sp=search,s"></script>
   @endif */ ?>
-  @if ($header['fixedbox'] == true)
-    <style>
+  
+  
+  <style>
+    @if ($header['UseDarkHeader'] == true)
+      .fixed-box--cover {
+        background-color: rgb(27,27,27);
+      }
+    @else
+      .fixed-box--cover {
+        background-color: rgb(27,27,27);
+      }
+    @endif
+    @if ($header['fixedbox'] == true)
       .usa-hero {
-        padding-top: 8rem;
+        padding-top: 2rem;
+      }
+      html {
+        margin-top: 8rem !important;
       }
       @if ($header['clearBG'] == true)
         .usa-header {
@@ -75,8 +89,8 @@
           }
         @endif
       @endif
-    </style>
-  @endif
+    @endif
+  </style>
   
 </head>
 
