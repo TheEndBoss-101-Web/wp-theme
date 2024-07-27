@@ -28,7 +28,7 @@
 }
 
 .fixed-box {
-  z-index: 7000;
+  z-index: 99999;
   width: 100%;
   position: fixed;
   top: 0px;
@@ -49,4 +49,13 @@
   top: 0px;
   height: 8rem;
   //position: static;
+}
+
+.usa-skipnav {
+  z-index: 7099999;
+  color: #005ea2;
+}
+
+.usa-skipnav:visited {
+  color: #1a4480;
 }

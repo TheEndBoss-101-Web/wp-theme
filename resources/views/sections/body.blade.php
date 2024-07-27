@@ -3,7 +3,7 @@
 @endif
 
 <body @php(body_class())>
-  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+  <a class="usa-skipnav" href="#main-content" tabindex="2">Skip to main content</a>
   @if ($header['fixedbox'] == true)
     <div class="fixed-box--cover"></div>
     <div class="fixed-box">
