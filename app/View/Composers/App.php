@@ -52,8 +52,8 @@ class App extends Composer
                 'showusagov' => false, // Whether to show the USA.gov banner
             ],
             'officialBanner' => [
-                'enabled' => true, // Whether to display the official domain banner
-                'dark' => false,
+                'enabled' => true, // Whether to display the banner
+                'dark' => false, // Use a dark theme for the banner
             ],
 
             // Site-related settings
