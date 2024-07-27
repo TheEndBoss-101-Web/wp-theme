@@ -53,7 +53,7 @@ class App extends Composer
             ],
             'officialBanner' => [
                 'enabled' => true, // Whether to display the official domain banner
-                'dark' => true,
+                'dark' => false,
             ],
 
             // Site-related settings

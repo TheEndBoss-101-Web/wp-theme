@@ -18,6 +18,7 @@
     color: #565c65;
   }
   .usa-banner__button:after {
+    background-color: #71767a;
     color: #71767a;
   }
   .usa-banner__button[aria-expanded=true]:after {
@@ -34,15 +35,18 @@
   .admin-bar & {
     top: var(--wp-admin--admin-bar--height);
   }
+  @media (max-width: 600px) {
+    position: absolute;
+  }
 }
 
 .fixed-box--cover {
-    position: absolute;
-    //position: fixed;
-    //background-color: rgb(27,27,27);
-    z-index: -1;
-    width: 100%;
-    top: 0px;
-    height: 8rem;
-    //position: static;
+  position: absolute;
+  //position: fixed;
+  //background-color: rgb(27,27,27);
+  z-index: -1;
+  width: 100%;
+  top: 0px;
+  height: 8rem;
+  //position: static;
 }
