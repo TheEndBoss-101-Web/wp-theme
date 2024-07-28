@@ -320,6 +320,18 @@ add_action( 'acf/include_fields', function() {
 				'value' => 'template-home.blade.php',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
+			),
+			array(
+				'param' => 'page_type',
+				'operator' => '==',
+				'value' => 'front_page',
+			),
+		),
 	),
 	'menu_order' => 3,
 	'position' => 'normal',
@@ -495,3 +507,4 @@ add_action( 'acf/include_fields', function() {
 	'show_in_rest' => 0,
 ) );
 } );
+

@@ -310,6 +310,18 @@
                     "operator": "==",
                     "value": "template-home.blade.php"
                 }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_type",
+                    "operator": "==",
+                    "value": "front_page"
+                }
             ]
         ],
         "menu_order": 3,
