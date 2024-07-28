@@ -24,7 +24,7 @@ class App extends Composer
         $toreturn = array(
             // Debugging settings
             'debug' => [
-                'templatenames' => true, // If true, will show which template is being loaded (useful for debugging)
+                'templatenames' => false, // If true, will show which template is being loaded (useful for debugging)
             ],
             // Header settings
             'header' => [
