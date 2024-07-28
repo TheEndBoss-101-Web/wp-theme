@@ -16,9 +16,20 @@
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div id="desktop" class="usa-layout-docs__sidenav display-none desktop:display-block desktop:grid-col-3">
-          <p class="usa-layout-docs__sidenav-title">On this page:</p>
-          <?php //echo('<nav class="anchorific" data-headings="'.(get_field("otp_heading_tags")).'" aria-label="Secondary navigation"></nav>'); ?>
-          <?php echo('<nav class="anchorific" data-headings="h2" aria-label="Secondary navigation"></nav>'); ?>
+          <aside
+            class="usa-in-page-nav"
+            data-title-text="On this page:"
+            data-heading-elements="{{ get_field("otp_heading_tags") }}"
+            data-title-heading-level=""
+            data-scroll-offset="0"
+            data-root-margin="0px 0px 0px 0px"
+            data-threshold="1"
+
+            style="top: {{
+            ($header['fixedbox'] ? '9rem' : '2rem')
+            }};"
+          >
+          </aside>
         </div>
         <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
           @while (have_posts()) @php(the_post())
