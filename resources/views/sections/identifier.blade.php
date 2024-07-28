@@ -33,7 +33,6 @@
       </section>
     </div>
   </section>
-  <?php //TODO-CONFIG: Set the links.?>
   @if (has_nav_menu('identifier-primary'))
   <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links,">
     <div class="usa-identifier__container">
