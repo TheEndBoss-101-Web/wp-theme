@@ -12,7 +12,7 @@
     {{ __('Sorry, this topic as no posts.', 'sage') }}
     </p>
     <h3>Search this site:</h3>
-    @include('forms.search', ['thisSite' => true])
+    @include('forms.search')
   </div>
 @else
   <div class="usa-section">
