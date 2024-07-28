@@ -1,4 +1,5 @@
-<?php/*
+<?php
+/*
 <form accept-charset="UTF-8" action="<?= get_site_url(); ?>/" id="search_form" method="get" class="usa-search usa-search-small js-search-form">
   <div role="search">
     <div style="margin:0;padding:0;display:inline"><!-- todo-config --><input name="utf8" type="hidden" value="YOUR_VALUE" /></div>
