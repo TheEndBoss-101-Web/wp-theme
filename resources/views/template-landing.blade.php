@@ -19,6 +19,17 @@
 </style>
 
 @if ( !get_field('otp_hide') )
+<section class="usa-hero" aria-label="Introduction">
+  <div class="grid-container">
+    <div class="usa-hero__callout">
+      <h1 class="usa-hero__heading"><span class="usa-hero__heading--alt">{{ get_field('lpt_hero_callout') }}</span>{{ get_field('lpt_leading_paragraph') }}</h1>
+      <p>{{ get_field('lpt_sub_paragraph') }}</p>
+      @if (get_field('lpt_show_button') == true)
+      <a class="usa-button" href="{{ get_field('lpt_button_url') }}">{{ get_field('lpt_button_text') }}</a>
+      @endif
+    </div>
+  </div>
+</section>
   <div class="usa-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
@@ -39,17 +50,6 @@
           </aside>
         </div>
         <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
-        <section class="usa-hero" aria-label="Introduction">
-          <div class="grid-container">
-            <div class="usa-hero__callout">
-              <h1 class="usa-hero__heading"><span class="usa-hero__heading--alt">{{ get_field('lpt_hero_callout') }}</span>{{ get_field('lpt_leading_paragraph') }}</h1>
-              <p>{{ get_field('lpt_sub_paragraph') }}</p>
-              @if (get_field('lpt_show_button') == true)
-              <a class="usa-button" href="{{ get_field('lpt_button_url') }}">{{ get_field('lpt_button_text') }}</a>
-              @endif
-            </div>
-          </div>
-        </section>
           @include('partials.page-header')
           @includeFirst(['partials.content-page', 'partials.content'])
         </main>
