@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> search</p>
-@endif
-
 <?php/*
 <form accept-charset="UTF-8" action="<?= get_site_url(); ?>/" id="search_form" method="get" class="usa-search usa-search-small js-search-form">
   <div role="search">
@@ -22,15 +18,11 @@
 </form>
 */?>
 <section aria-label="Search component">
-  <form accept-charset="UTF-8" action="<?= get_site_url(); ?>/" id="search_form" method="get" class="usa-search usa-search--small" role="search">
+  <form accept-charset="UTF-8" action="{{ esc_url(home_url('/')) }}" id="search_form" method="get" class="usa-search usa-search--small" role="search">
     <label class="usa-sr-only" for="search-field">Search</label>
-    <input class="usa-input" id="search-field" type="search" name="search" name="s" />
+    <input class="usa-input" id="search-field" type="search" placeholder="Search" name="s" />
     <button class="usa-button" type="submit">
       <img src="@asset('images/usa-icons-bg/search--white.svg')" class="usa-search__submit-icon" alt="Search" />
     </button>
   </form>
 </section>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>end:</strong> search</p>
-@endif

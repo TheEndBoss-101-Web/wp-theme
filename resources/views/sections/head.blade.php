@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> head</p>
-@endif
-
 <head>
 
   <!-- Basic Page Needs
@@ -93,7 +89,3 @@
   </style>
   
 </head>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> head</p>
-@endif

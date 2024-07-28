@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> Banner</p>
-@endif
-
 <section class="usa-banner{{
   ($officialBanner['dark'] ? ' usa-banner--dark' : '')
   }}" aria-label="Official website of the {{ $site['government'] }} government">
@@ -54,7 +50,3 @@
     </div>
   </div>
 </section>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> Banner</p>
-@endif

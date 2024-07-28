@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> Body</p>
-@endif
-
 <body @php(body_class())>
   <a class="usa-skipnav" href="#main-content" tabindex="2">Skip to main content</a>
   @if ($header['fixedbox'] == true)
@@ -39,7 +35,3 @@
   @endif
   @php(wp_footer())
 </body>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> Body</p>
-@endif

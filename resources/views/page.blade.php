@@ -2,7 +2,7 @@
 
 @section('content')
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Star Template:</strong> page</p>
+  <p class="text-base"><strong>Star View:</strong> Page</p>
 @endif
 
 @if ( !get_field('otp_hide') )
@@ -45,7 +45,7 @@
 @endif
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End Template:</strong> page</p>
+  <p class="text-base"><strong>End View:</strong> Page</p>
 @endif
 
 @endsection

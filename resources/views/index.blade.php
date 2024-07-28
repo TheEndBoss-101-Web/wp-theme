@@ -3,7 +3,7 @@
 @section('content')
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start Template:</strong> index</p>
+  <p class="text-base"><strong>Start View:</strong> Index</p>
 @endif
 
 @if ( !have_posts() )
@@ -47,7 +47,7 @@
 @endif
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End Template:</strong> index</p>
+  <p class="text-base"><strong>End View:</strong> Index</p>
 @endif
 
 @endsection

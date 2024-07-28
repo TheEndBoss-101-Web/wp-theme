@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> footer</p>
-@endif
-
 <footer class="usa-footer{{
   ($footer['size'] == 'big' ? ' usa-footer--big' : '') . 
   ($footer['size'] == 'slim' ? ' usa-footer--slim' : '')
@@ -221,7 +217,3 @@
     </div>
   @endif
 </footer>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> footer</p>
-@endif

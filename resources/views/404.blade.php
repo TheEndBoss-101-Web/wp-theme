@@ -3,7 +3,7 @@
 @section('content')
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start Template:</strong> 404</p>
+  <p class="text-base"><strong>Start View:</strong> 404</p>
 @endif
 
 <div class="usa-section">
@@ -64,7 +64,7 @@
 </div>
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End Template:</strong> 404</p>
+  <p class="text-base"><strong>End View:</strong> 404</p>
 @endif
 
 @endsection

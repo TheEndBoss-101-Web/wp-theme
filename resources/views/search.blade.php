@@ -3,7 +3,7 @@
 @section('content')
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> search</p>
+  <p class="text-base"><strong>Start View:</strong> Search</p>
 @endif
 
 <div class="usa-section">
@@ -34,7 +34,7 @@
 </div>
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End Template:</strong> search</p>
+  <p class="text-base"><strong>End View:</strong> Search</p>
 @endif
 
 @endsection

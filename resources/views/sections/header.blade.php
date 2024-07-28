@@ -1,7 +1,3 @@
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> header</p>
-@endif
-
 <header class="usa-header{{
   ($header['extended'] ? ' usa-header--extended' : ' usa-header--basic') . 
   ($header['UseDarkHeader'] ? ' usa-header--dark' : '') . 
@@ -78,7 +74,3 @@
     </nav>
   </div>
 </header>
-
-@if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> header</p>
-@endif

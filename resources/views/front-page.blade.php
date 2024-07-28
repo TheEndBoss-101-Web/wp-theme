@@ -3,7 +3,7 @@
 @section('content')
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>Start:</strong> front-page</p>
+  <p class="text-base"><strong>Start View:</strong> Front-Page</p>
 @endif
 
 <main id="main-content" class="usa-content main-content">
@@ -29,7 +29,7 @@
 </main>
 
 @if ($debug['templatenames'] == true)
-  <p class="text-base"><strong>End:</strong> front-page</p>
+  <p class="text-base"><strong>End View:</strong> Front-Page</p>
 @endif
 
 @endsection
