@@ -1,0 +1,117 @@
+{
+    "key": "group_66a5fd2924f59",
+    "title": "Navigation Options",
+    "fields": [
+        {
+            "key": "field_66a5fd2958a40",
+            "label": "Remove Left Navigation",
+            "name": "otp_hide",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66a5fd6858a41",
+            "label": "Type",
+            "name": "navigation_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a5fd2958a40",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single_page": "Single Page",
+                "multiple_page": "Multiple Page"
+            },
+            "default_value": "single_page",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_66a5fe3658a42",
+            "label": "Heading tags to use",
+            "name": "otp_heading_tags",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Select which tags get used to generate the navigation.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a5fd2958a40",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_66a5fd6858a41",
+                        "operator": "==",
+                        "value": "single_page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h2 h3 h4": "h2, h3, and h4",
+                "h2 h3": "h2 and h3",
+                "h2": "h2"
+            },
+            "default_value": "h2 h3 h4",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1722168273
+}

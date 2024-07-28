@@ -40,6 +40,7 @@
   },
   "require": {
     "php": ">=8.1",
+    "mwdelaney/sage-advanced-custom-fields": "^1.6",
     "roots/acorn": "^4.3"
   },
   "require-dev": {

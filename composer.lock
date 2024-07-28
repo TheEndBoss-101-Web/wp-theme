@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2a63876687ef428647f9a21b43dc04a",
+    "content-hash": "b6216b608db4f8f4f33f11ff13a14630",
     "packages": [
         {
             "name": "brick/math",
@@ -2622,6 +2622,101 @@
                 }
             ],
             "time": "2024-06-28T09:40:51+00:00"
+        },
+        {
+            "name": "mwdelaney/sage-acf-gutenberg-blocks",
+            "version": "0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MWDelaney/sage-acf-wp-blocks.git",
+                "reference": "795527e63b45c8426741a074270355953b28ce37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MWDelaney/sage-acf-wp-blocks/zipball/795527e63b45c8426741a074270355953b28ce37",
+                "reference": "795527e63b45c8426741a074270355953b28ce37",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "sage-acf-gutenberg-blocks.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael W. Delaney",
+                    "email": "michael@michaeldelaney.me"
+                },
+                {
+                    "name": "Nico Prat"
+                }
+            ],
+            "description": "Create Gutenberg blocks from Sage blade templates and ACF fields.",
+            "homepage": "https://github.com/MWDelaney/sage-acf-gutenberg-blocks",
+            "keywords": [
+                "advanced custom fields",
+                "gutenberg",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/MWDelaney/sage-acf-wp-blocks/issues",
+                "source": "https://github.com/MWDelaney/sage-acf-wp-blocks/tree/0.7"
+            },
+            "time": "2021-01-13T21:07:25+00:00"
+        },
+        {
+            "name": "mwdelaney/sage-advanced-custom-fields",
+            "version": "1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MWDelaney/sage-advanced-custom-fields.git",
+                "reference": "96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MWDelaney/sage-advanced-custom-fields/zipball/96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd",
+                "reference": "96d21294fa1bbb090a1c8b8ae39f8dcf018d61cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "advanced-custom-fields.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael W. Delaney",
+                    "email": "michael@michaeldelaney.me"
+                }
+            ],
+            "description": "Advanced Custom Fields local JSON setup for Sage 9 based themes",
+            "homepage": "https://github.com/MWDelaney/sage-advanced-custom-fields",
+            "keywords": [
+                "advanced custom fields",
+                "json",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/MWDelaney/sage-advanced-custom-fields/issues",
+                "source": "https://github.com/MWDelaney/sage-advanced-custom-fields/tree/1.6"
+            },
+            "time": "2021-02-01T16:02:34+00:00"
         },
         {
             "name": "nesbot/carbon",

@@ -1,0 +1,163 @@
+{
+    "key": "group_66a5fae9847fc",
+    "title": "Landing Page Settings",
+    "fields": [
+        {
+            "key": "field_66a5fae97e0a4",
+            "label": "Hero Callout",
+            "name": "lpt_hero_callout",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Hero callout:",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66a5fb6b7e0a7",
+            "label": "Leading paragraph",
+            "name": "lpt_leading_paragraph",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bring attention to a project priority",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66a5fb9b7e0a8",
+            "label": "Sub paragraph",
+            "name": "lpt_sub_paragraph",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "Support the callout with some short explanatory text. You don’t need more than a couple of sentences.",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_66a6019fc20b3",
+            "label": "Show Hero Button",
+            "name": "lpt_show_button",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_66a601cbc20b4",
+            "label": "Button Text",
+            "name": "lpt_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a6019fc20b3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Call to action",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66a6023dcb123",
+            "label": "Button URL",
+            "name": "lpt_button_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66a6019fc20b3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/example.com\/"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-landing.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1722168269
+}
