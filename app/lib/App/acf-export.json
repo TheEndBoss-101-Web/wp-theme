@@ -161,6 +161,168 @@
         "show_in_rest": 0
     },
     {
+        "key": "group_66a61af381255",
+        "title": "Home Page Settings",
+        "fields": [
+            {
+                "key": "field_66a61af386c8f",
+                "label": "Hero Callout",
+                "name": "hpt_hero_callout",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "Hero callout:",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_66a61af386d0d",
+                "label": "Leading paragraph",
+                "name": "hpt_leading_paragraph",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "Bring attention to a project priority",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_66a61af386d8b",
+                "label": "Sub paragraph",
+                "name": "hpt_sub_paragraph",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "Support the callout with some short explanatory text. You don’t need more than a couple of sentences.",
+                "new_lines": "br"
+            },
+            {
+                "key": "field_66a61af386e27",
+                "label": "Show Hero Button",
+                "name": "hpt_show_button",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_66a61af386e9a",
+                "label": "Button Text",
+                "name": "hpt_button_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66a61af386e27",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "Call to action",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_66a61af386f12",
+                "label": "Button URL",
+                "name": "hpt_button_url",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_66a61af386e27",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https:\/\/example.com\/"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                },
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-home.blade.php"
+                }
+            ]
+        ],
+        "menu_order": 3,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
         "key": "group_66a5fae9847fc",
         "title": "Landing Page Settings",
         "fields": [
@@ -312,7 +474,7 @@
                 }
             ]
         ],
-        "menu_order": 4,
+        "menu_order": 3,
         "position": "normal",
         "style": "default",
         "label_placement": "top",

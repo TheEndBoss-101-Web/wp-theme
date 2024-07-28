@@ -38,7 +38,7 @@
     </div>
   </div>
 @else
-  <main class="usa-section" id="main-content">
+  <main class="usa-section main-content" id="main-content">
     @include('partials.page-header')
     @includeFirst(['partials.content-page', 'partials.content'])
   </main>

@@ -6,7 +6,7 @@
   <p class="text-base"><strong>Start Template:</strong> front-page</p>
 @endif
 
-  <main id="main-content" class="usa-content">
+  <main id="main-content" class="main-content">
     @while(have_posts()) @php(the_post())
       @include('partials.content-page')
     @endwhile

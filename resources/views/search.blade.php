@@ -9,7 +9,7 @@
 <div class="usa-section">
     <div class="grid-container">
         <div class="grid-row grid-gap">
-            <main class="" id="main-content">
+            <main class="main-content" id="main-content">
                 <div class="usa-prose">
                   @include('partials.page-header')
 

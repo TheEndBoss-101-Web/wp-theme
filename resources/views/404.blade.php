@@ -9,7 +9,7 @@
 <div class="usa-section">
     <div class="grid-container">
         <div class="grid-row grid-gap">
-            <main class="" id="main-content">
+            <main class="main-content" id="main-content">
                 <div class="usa-prose">
                     <!-- This template can be used for most types of error pages -->
                     <!-- Remove these comments when you build your error pages -->
