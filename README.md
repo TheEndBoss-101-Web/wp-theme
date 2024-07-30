@@ -1,4 +1,4 @@
-# NASAWDS / USWDS Sage WordPress Theme
+# NASAWDS Sage WordPress Theme
 
 > [!WARNING]
 > This theme is in devlopment.
@@ -10,9 +10,26 @@ This WordPress theme is based on Sage and integrates the NASA Web Design System 
 ## Features
 
 - Responsive layout for mobile and desktop devices.
-- Integrates the U.S. Web Design System components.
+- Integrates the NASA Web Design System.
+- Sass for stylesheets.
 - Accessibility-focused design.
 - Built with Sage for efficient development and modern workflows.
+
+## Required Plugins
+
+- [Add Categories to Pages](https://wordpress.org/plugins/add-category-to-pages/)
+- [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+
+### Recomended Plugins
+
+- [TinyMCE Advanced](https://wordpress.org/plugins/tinymce-advanced/)
+- [Better WordPress External Links](https://wordpress.org/plugins/bwp-external-links/)
+  - Set 'External links' CSS class to `usa-link--external`
+  - Uncheck 'Use CSS provided by this plugin?'
+- [Responsive Lightbox](https://wordpress.org/plugins/responsive-lightbox/)
+  - for viewing images in a lightbox.
+- [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
+  - for breadcrumbs
 
 ## Setup
 
