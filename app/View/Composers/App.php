@@ -66,7 +66,7 @@ class App extends Composer
 
             // Project-related settings
             'project' => [
-                'logo' => asset('images/logo-nasa.svg'), // Path to the project's logo image
+                'logo' => asset('images/circle-gray-20.svg'), // Path to the project's logo image
                 'line1' => 'Project', // First line of the project title
                 'line2' => 'Title', // Second line of the project title
                 'name' => 'Project Title', // Full project title
