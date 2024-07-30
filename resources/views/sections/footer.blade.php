@@ -140,16 +140,20 @@
           <div class="mobile-lg:grid-col-4">
             <address class="usa-footer__address">
               <div class="grid-row grid-gap">
-                <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
-                  <div class="usa-footer__contact-info">
-                    <a href="tel:{{ $agency['contact_pn_link'] }}">{{ $agency['contact_pn'] }}</a>
+                @if (strlen(trim($agency['contact_pn_link'])) > 0 || strlen(trim($agency['contact_pn'])) > 0)
+                  <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                    <div class="usa-footer__contact-info">
+                      <a href="tel:{{ $agency['contact_pn_link'] }}">{{ $agency['contact_pn'] }}</a>
+                    </div>
                   </div>
-                </div>
-                <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
-                  <div class="usa-footer__contact-info">
-                    <a href="mailto:{{ $agency['contact_email'] }}">{{ $agency['contact_email'] }}</a>
+                @endif
+                @if (strlen(trim($agency['contact_email'])) > 0)
+                  <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                    <div class="usa-footer__contact-info">
+                      <a href="mailto:{{ $agency['contact_email'] }}">{{ $agency['contact_email'] }}</a>
+                    </div>
                   </div>
-                </div>
+                @endif
               </div>
             </address>
           </div>
@@ -190,12 +194,16 @@
           <p class="usa-footer__contact-heading"> {{ $agency['contact_center'] }} </p>
           <address class="usa-footer__address">
             <div class="usa-footer__contact-info grid-row grid-gap">
-              <div class="grid-col-auto">
-                <a href="tel:{{ $agency['contact_pn_link'] }}">{{ $agency['contact_pn'] }}</a>
-              </div>
-              <div class="grid-col-auto">
-                <a href="mailto:{{ $agency['contact_email'] }}">{{ $agency['contact_email'] }}</a>
-              </div>
+              @if (strlen(trim($agency['contact_pn_link'])) > 0 || strlen(trim($agency['contact_pn'])) > 0)
+                <div class="grid-col-auto">
+                  <a href="tel:{{ $agency['contact_pn_link'] }}">{{ $agency['contact_pn'] }}</a>
+                </div>
+              @endif
+              @if (strlen(trim($agency['contact_email'])) > 0)
+                <div class="grid-col-auto">
+                  <a href="mailto:{{ $agency['contact_email'] }}">{{ $agency['contact_email'] }}</a>
+                </div>
+              @endif
             </div>
           </address>
         </div>
