@@ -29,6 +29,11 @@
           </aside>
         </div>
         <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
+          @php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div>');
+            }
+          @endphp
           @include('partials.page-header')
           @includeFirst(['partials.content-page', 'partials.content'])
         </main>
@@ -39,6 +44,11 @@
   </div>
 @else
   <main class="usa-section main-content" id="main-content">
+    @php
+      if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div>');
+      }
+    @endphp
     @include('partials.page-header')
     @includeFirst(['partials.content-page', 'partials.content'])
   </main>

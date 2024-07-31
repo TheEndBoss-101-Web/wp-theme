@@ -35,13 +35,19 @@
           </aside>
         </div>
         <main class="desktop:grid-col-9 usa-prose main-content" id="main-content">
+          @php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div>');
+            }
+          @endphp
+          <?php /*
   @if (have_posts())
     @php
       $cat = get_category( get_query_var( 'cat' ) );
       $cat_id = $cat->cat_ID;
       echo category_description( $cat_id ); 
     @endphp
-  @endif
+  @endif*/?>
   @while (have_posts()) @php(the_post())
     @include ('partials.content')
   @endwhile

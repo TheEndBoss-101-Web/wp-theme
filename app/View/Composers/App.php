@@ -26,6 +26,12 @@ class App extends Composer
             'debug' => [
                 'templatenames' => false, // If true, will show which template is being loaded (useful for debugging)
             ],
+
+            'breadCrumsHeroLocation' => true, // True for above false for below.
+
+
+
+
             // Header settings
             'header' => [
                 'enabled' => true, // Whether the header is enabled
@@ -51,11 +57,13 @@ class App extends Composer
                 'taxpayer_disclaimer' => false, // Whether to show the taxpayer disclaimer
                 'showusagov' => false, // Whether to show the USA.gov banner
             ],
+            // Oficial Banner settings
             'officialBanner' => [
                 'enabled' => true, // Whether to display the banner
                 'dark' => false, // Use a dark theme for the banner
                 'icon' => asset('images/us_flag_small.png'), // The icon of the banner.
             ],
+
 
             // Site-related settings
             'site' => [

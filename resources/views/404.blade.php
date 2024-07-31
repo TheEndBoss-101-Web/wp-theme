@@ -16,6 +16,13 @@
 
                     <!-- Describe the error in the main heading -->
                     <h1>Page not found</h1>
+                    <h6>
+                        @php
+                          if ( function_exists('yoast_breadcrumb') ) {
+                            yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div>');
+                          }
+                        @endphp
+                    </h6>
 
                     <!-- Explain what caused the error in the lead text -->
                     <p class="usa-intro">We’re sorry, we can’t find the page you're looking for. The site administrator may have removed it, changed its location, or made it otherwise unavailable.</p>

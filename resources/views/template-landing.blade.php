@@ -21,6 +21,13 @@
 @if ( !get_field('otp_hide') )
 <section class="usa-hero" aria-label="Introduction">
   <div class="grid-container">
+    @if ($breadCrumsHeroLocation)
+      @php
+        if ( function_exists('yoast_breadcrumb') ) {
+          yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div><br>');
+        }
+      @endphp
+    @endif
     <div class="usa-hero__callout">
       <h1 class="usa-hero__heading"><span class="usa-hero__heading--alt">{{ get_field('lpt_hero_callout') }}</span>{{ get_field('lpt_leading_paragraph') }}</h1>
       <p>{{ get_field('lpt_sub_paragraph') }}</p>
@@ -28,6 +35,13 @@
       <a class="usa-button" href="{{ get_field('lpt_button_url') }}">{{ get_field('lpt_button_text') }}</a>
       @endif
     </div>
+    @if (!$breadCrumsHeroLocation)
+      @php
+        if ( function_exists('yoast_breadcrumb') ) {
+          yoast_breadcrumb('<br><div class="breadcrumbs" id="breadcrumbs">','</div>');
+        }
+      @endphp
+    @endif
   </div>
 </section>
   <div class="usa-section">
@@ -60,6 +74,11 @@
   </div>
 @else
   <main class="usa-section main-content" id="main-content">
+    @php
+      if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div>');
+      }
+    @endphp
     @include('partials.page-header')
     @includeFirst(['partials.content-page', 'partials.content'])
   </main>
