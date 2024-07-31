@@ -33,12 +33,14 @@
   </style>
   <section class="usa-hero" aria-label="Introduction">
     <div class="grid-container">
-      @if ($breadCrumsHeroLocation)
-        @php
-          if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div><br>');
-          }
-        @endphp
+      @if (get_field('hpt_show_breadcrumbs') == true)
+        @if ($breadCrumsHeroLocation)
+          @php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb('<div class="breadcrumbs" id="breadcrumbs">','</div><br>');
+            }
+          @endphp
+        @endif
       @endif
       <div class="usa-hero__callout">
         <h1 class="usa-hero__heading"><span class="usa-hero__heading--alt">{{ get_field('hpt_hero_callout') }}</span>{{ get_field('hpt_leading_paragraph') }}</h1>
@@ -47,12 +49,14 @@
         <a class="usa-button" href="{{ get_field('hpt_button_url') }}">{{ get_field('hpt_button_text') }}</a>
         @endif
       </div>
-      @if (!$breadCrumsHeroLocation)
-        @php
-          if ( function_exists('yoast_breadcrumb') ) {
-            yoast_breadcrumb('<br><div class="breadcrumbs" id="breadcrumbs">','</div>');
-          }
-        @endphp
+      @if (get_field('hpt_show_breadcrumbs') == true)
+        @if (!$breadCrumsHeroLocation)
+          @php
+            if ( function_exists('yoast_breadcrumb') ) {
+              yoast_breadcrumb('<br><div class="breadcrumbs" id="breadcrumbs">','</div>');
+            }
+          @endphp
+        @endif
       @endif
     </div>
   </section>
