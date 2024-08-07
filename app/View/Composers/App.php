@@ -21,6 +21,7 @@ class App extends Composer
      * @return array
      */
     public function with() {
+
         $toreturn = array(
             // Debugging settings
             'debug' => [
@@ -106,14 +107,17 @@ class App extends Composer
             ],
         );
 
-
-
-
-
-
-
         // ! DO NOT EDIT BELOW ! \\
+
         $toreturn['header']['clearBG'] = false;
+
+        if ( ! function_exists('get_field') ) {
+            echo("<h1>Critical Site Error:</h1>");
+            echo("<p>Advanced Custom Fields is <b>REQUIRED</b> to use this theme.</p>");
+            echo("<p>Please install it <a href=\"https://wordpress.org/plugins/advanced-custom-fields/\">here</a>.</p>");
+            exit();
+        }
+          
         return $toreturn;
     }
 }
