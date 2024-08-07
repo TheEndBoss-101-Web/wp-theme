@@ -30,9 +30,6 @@ class App extends Composer
 
             'breadCrumsHeroLocation' => true, // True for above false for below.
 
-
-
-
             // Header settings
             'header' => [
                 'enabled' => true, // Whether the header is enabled
@@ -117,7 +114,65 @@ class App extends Composer
             echo("<p>Please install it <a href=\"https://wordpress.org/plugins/advanced-custom-fields/\">here</a>.</p>");
             exit();
         }
+
+        $toreturn['category_tags'] = $this->category_tags();
+        $toreturn['pagination'] = $this->pagination();
           
         return $toreturn;
+    }
+
+    public function pagination() {
+        return get_the_posts_navigation();
+        global $wp_query;
+
+        $return = '';
+    
+        $big = 999999999; // need an unlikely integer
+    
+        $pagination_args = array(
+            'base'               => str_replace($big, '%#%', get_pagenum_link($big)),
+            'format'             => '?paged=%#%',
+            'current'            => max(1, get_query_var('paged')),
+            'total'              => $wp_query->max_num_pages,
+            'prev_text'          => __('<svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="/assets/img/sprite.svg#navigate_before"></use></svg><span class="usa-pagination__link-text">Previous</span>', 'sage'),
+            'next_text'          => __('<span class="usa-pagination__link-text">Next</span><svg class="usa-icon" aria-hidden="true" role="img"><use xlink:href="/assets/img/sprite.svg#navigate_next"></use></svg>', 'sage'),
+            'type'               => 'array',
+            'end_size'           => 1,
+            'mid_size'           => 2,
+        );
+    
+        $links = paginate_links($pagination_args);
+    
+        if ($links) {
+            $return .= '<nav aria-label="Pagination" class="usa-pagination">';
+            $return .= '<ul class="usa-pagination__list">';
+    
+            foreach ($links as $link) {
+                //var_dump($link);
+                $return .= '<li class="usa-pagination__item">';
+                $return .= $link;
+                $return .= '</li>';
+            }
+    
+            $return .= '</ul>';
+            $return .= '</nav>';
+        }
+        return $return;
+    }
+
+    public function category_tags() {
+        $categories = get_the_category();
+        $return = '';
+        //var_dump($categories);
+        if (! empty( $categories ) ) {
+            foreach ($categories as $term) {
+                $name = $term->name;
+                $slug = $term->slug;
+                $homeurl = esc_url(home_url('/'));
+                //$return .= "<a href=\"/category/$slug\"><li class=\"usa-collection__meta-item usa-tag\">$name</li></a>";
+                $return .= "<li class=\"usa-collection__meta-item usa-tag\"><a href=\"$homeurl/category/$slug\">$name</a></li>";
+            }
+        }
+        return $return;
     }
 }

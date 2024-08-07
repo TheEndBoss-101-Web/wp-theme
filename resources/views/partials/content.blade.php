@@ -2,22 +2,40 @@
   <p class="text-base"><strong>Start:</strong> content</p>
 @endif
 
-<article @php(post_class())>
-  <header>
-    <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
-    @if (get_post_type() == 'post')
-      @include('partials.entry-meta')
-    @endif
-  </header>
-  <div class="entry-summary usa-grid-full">
-    @php( $post_thumbnail = get_the_post_thumbnail(null, 'thumbnail') )
+@php( $post_id = get_the_ID() )
+@php( $post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' ) )
+
+<li class="usa-collection__item">
+  <?php //article @php(post_class())?>
     @if ($post_thumbnail)
-      <div class="usa-width-one-third"><figure class="wp-caption">{!! $post_thumbnail !!}<figcaption class="wp-caption-text">{!! get_the_post_thumbnail_caption() !!}</figcaption></figure></div><div class="usa-width-two-thirds">@php( the_excerpt() )</div>
-    @else   
-      @php( the_excerpt() )
+      <img class="usa-collection__img" src="{!! esc_url( $post_thumbnail[0] ) !!}" alt="{!! get_the_post_thumbnail_caption() !!}">
     @endif
-  </div>
-</article>
+    <div class="usa-collection__body">
+      <?php //header?>
+        <h4 class="usa-collection__heading">
+          <a class="usa-link" href="{{ get_permalink() }}">{{ get_the_title() }}</a>
+        </h4>
+      <?php ///header?>
+      <p class="usa-collection__description">
+      @php(the_excerpt())
+      </p>
+      <ul class="usa-collection__meta" aria-label="More information">
+        <li class="usa-collection__meta-item">
+          {{ __('By', 'sage') }} <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author">{{ get_the_author() }}</a>
+        </li>
+        <li class="usa-collection__meta-item">
+          <time datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+        </li>
+      </ul>
+      <ul class="usa-collection__meta" aria-label="Topics">
+        <?php
+          echo($category_tags);
+        ?>
+        <li class="usa-collection__meta-item usa-tag usa-tag--new">New</li>
+      </ul>
+    </div>
+  <?php ///article?>
+</li>
 
 @if ($debug['templatenames'] == true)
   <p class="text-base"><strong>End:</strong> content</p>

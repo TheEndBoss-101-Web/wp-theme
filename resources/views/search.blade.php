@@ -22,11 +22,15 @@
                   </div>
                   @endif
 
+                  <ul class="usa-collection">
+
                   @while(have_posts()) @php(the_post())
                     @include('partials.content-search')
                   @endwhile
 
-                  {!! get_the_posts_navigation() !!}
+                  </ul>
+
+                  {!! $pagination !!}
                 </div>
             </main>
         </div>

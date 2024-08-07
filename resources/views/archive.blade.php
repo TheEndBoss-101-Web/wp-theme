@@ -22,7 +22,8 @@
           <aside
             class="usa-in-page-nav"
             data-title-text="On this page:"
-            data-heading-elements="{{ get_field("otp_heading_tags") }}"
+            <?php //data-heading-elements="{{ get_field("otp_heading_tags") }}"?>
+            data-heading-elements="h3 h4"
             data-title-heading-level=""
             data-scroll-offset="0"
             data-root-margin="0px 0px 0px 0px"
@@ -48,9 +49,11 @@
       echo category_description( $cat_id ); 
     @endphp
   @endif*/?>
+  <ul class="usa-collection">
   @while (have_posts()) @php(the_post())
     @include ('partials.content')
   @endwhile
+  </ul>
 
   {!! get_the_posts_navigation() !!}
         </main>
