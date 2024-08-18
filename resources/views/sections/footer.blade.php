@@ -1,11 +1,11 @@
 <footer class="usa-footer{{
-  (get_theme_mod('footer_size') == 'big' ? ' usa-footer--big' : '') . 
-  (get_theme_mod('footer_size') == 'slim' ? ' usa-footer--slim' : '')
+  (get_theme_mod('footer_size', 'med') == 'big' ? ' usa-footer--big' : '') . 
+  (get_theme_mod('footer_size', 'med') == 'slim' ? ' usa-footer--slim' : '')
   }}">
   <div class="grid-container usa-footer__return-to-top">
     <a href="#">Return to top</a>
   </div>
-  @if (get_theme_mod('footer_size') == 'big')
+  @if (get_theme_mod('footer_size', 'med') == 'big')
     <div class="usa-footer__primary-section">
       <div class="grid-container">
         <div class="grid-row grid-gap">
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-  @elseif (get_theme_mod('footer_size') == 'med')
+  @elseif (get_theme_mod('footer_size', 'med') == 'med')
     @if (has_nav_menu('footer-primary'))
     <div class="usa-footer__primary-section">
       @php
@@ -120,7 +120,7 @@
       @endphp
     </div>
     @endif
-  @elseif (get_theme_mod('footer_size') == 'slim')
+  @elseif (get_theme_mod('footer_size', 'med') == 'slim')
     @if (has_nav_menu('footer-primary'))
       <div class="usa-footer__primary-section">
         <div class="usa-footer__primary-container grid-row">
@@ -140,17 +140,17 @@
           <div class="mobile-lg:grid-col-4">
             <address class="usa-footer__address">
               <div class="grid-row grid-gap">
-                @if (strlen(trim(get_theme_mod('agency_contact_pn_link'))) > 0 || strlen(trim(get_theme_mod('agency_contact_pn'))) > 0)
+                @if (strlen(trim(get_theme_mod('agency_contact_pn_link', '1-800-555-5555'))) > 0 || strlen(trim(get_theme_mod('agency_contact_pn', '(800) 555-GOV'))) > 0)
                   <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
                     <div class="usa-footer__contact-info">
-                      <a href="tel:{{ get_theme_mod('agency_contact_pn_link') }}">{{ get_theme_mod('agency_contact_pn') }}</a>
+                      <a href="tel:{{ get_theme_mod('agency_contact_pn_link', '1-800-555-5555') }}">{{ get_theme_mod('agency_contact_pn', '(800) 555-GOV') }}</a>
                     </div>
                   </div>
                 @endif
-                @if (strlen(trim(get_theme_mod('agency_contact_email'))) > 0)
+                @if (strlen(trim(get_theme_mod('agency_contact_email', 'info@agency.gov'))) > 0)
                   <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
                     <div class="usa-footer__contact-info">
-                      <a href="mailto:{{ get_theme_mod('agency_contact_email') }}">{{ get_theme_mod('agency_contact_email') }}</a>
+                      <a href="mailto:{{ get_theme_mod('agency_contact_email', 'info@agency.gov') }}">{{ get_theme_mod('agency_contact_email', 'info@agency.gov') }}</a>
                     </div>
                   </div>
                 @endif
@@ -177,31 +177,31 @@
       </div>
     </div>
   @endif
-  @if (get_theme_mod('footer_size') != 'slim')
+  @if (get_theme_mod('footer_size', 'med') != 'slim')
   <div class="usa-footer__secondary-section">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
           <div class="mobile-lg:grid-col-auto">
-            <img class="usa-footer__logo-img" src="{{ get_theme_mod('agency_logo') }}" alt="{{ get_theme_mod('agency_name') }}'s logo" />
+            <img class="usa-footer__logo-img" src="{{ get_theme_mod('agency_logo', \Roots\asset('images/logo-img.png')->uri()) }}" alt="{{ get_theme_mod('agency_name', 'Agency Name') }}'s logo" />
           </div>
           <div class="mobile-lg:grid-col-auto">
-            <p class="usa-footer__logo-heading">{{ get_theme_mod('agency_name') }}</p>
+            <p class="usa-footer__logo-heading">{{ get_theme_mod('agency_name', 'Agency Name') }}</p>
           </div>
         </div>
         <div class="usa-footer__contact-links mobile-lg:grid-col-6">
           @include('snips.footer-social-links')
-          <p class="usa-footer__contact-heading"> {{ get_theme_mod('agency_contact_center') }} </p>
+          <p class="usa-footer__contact-heading"> {{ get_theme_mod('agency_contact_center', 'Agency Contact Center') }} </p>
           <address class="usa-footer__address">
             <div class="usa-footer__contact-info grid-row grid-gap">
-              @if (strlen(trim(get_theme_mod('agency_contact_pn_link'))) > 0 || strlen(trim(get_theme_mod('agency_contact_pn'))) > 0)
+              @if (strlen(trim(get_theme_mod('agency_contact_pn_link', '1-800-555-5555'))) > 0 || strlen(trim(get_theme_mod('agency_contact_pn', '(800) 555-GOV'))) > 0)
                 <div class="grid-col-auto">
-                  <a href="tel:{{ get_theme_mod('agency_contact_pn_link') }}">{{ get_theme_mod('agency_contact_pn') }}</a>
+                  <a href="tel:{{ get_theme_mod('agency_contact_pn_link', '1-800-555-5555') }}">{{ get_theme_mod('agency_contact_pn', '(800) 555-GOV') }}</a>
                 </div>
               @endif
-              @if (strlen(trim(get_theme_mod('agency_contact_email'))) > 0)
+              @if (strlen(trim(get_theme_mod('agency_contact_email', 'info@agency.gov'))) > 0)
                 <div class="grid-col-auto">
-                  <a href="mailto:{{ get_theme_mod('agency_contact_email') }}">{{ get_theme_mod('agency_contact_email') }}</a>
+                  <a href="mailto:{{ get_theme_mod('agency_contact_email', 'info@agency.gov') }}">{{ get_theme_mod('agency_contact_email', 'info@agency.gov') }}</a>
                 </div>
               @endif
             </div>
@@ -215,10 +215,10 @@
       <div class="grid-container">
       <div class="usa-footer__logo grid-row grid-gap-2">
           <div class="grid-col-auto">
-            <img class="usa-footer__logo-img" src="{{ $agency['logo'] }}" alt="{{ $agency['name'] }}'s logo">
+            <img class="usa-footer__logo-img" src="{{ get_theme_mod('agency_logo', \Roots\asset('images/logo-img.png')->uri()) }}" alt="{{ get_theme_mod('agency_name', 'Agency Name') }}'s logo">
           </div>
           <div class="grid-col-auto">
-            <p class="usa-footer__logo-heading">{{ get_theme_mod('agency_contact_center') }}</p>
+            <p class="usa-footer__logo-heading">{{ get_theme_mod('agency_contact_center', 'Agency Contact Center') }}</p>
           </div>
         </div>
       </div>

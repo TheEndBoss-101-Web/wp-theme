@@ -54,7 +54,7 @@
   
   
   <style>
-    @if (get_theme_mod('header_UseDarkHeader') == true)
+    @if (get_theme_mod('header_UseDarkHeader', true) == true)
       .fixed-box--cover {
         background-color: rgb(27,27,27);
       }
@@ -63,20 +63,20 @@
         background-color: rgb(27,27,27);
       }
     @endif
-    @if (get_theme_mod('header_fixedbox') == true)
+    @if (get_theme_mod('header_fixedbox', true) == true)
       .usa-hero {
         padding-top: 2rem;
       }
       html {
         margin-top: 8rem !important;
       }
-      @if (get_theme_mod('header_clearBG') == true)
+      @if (get_theme_mod('header_clearBG', false) == true)
         .usa-header {
           background: none;
         }
       @endif
-      @if (get_theme_mod('header_fadeBG')  == true)
-        @if (get_theme_mod('header_UseDarkHeader')  == true)
+      @if (get_theme_mod('header_fadeBG', false)  == true)
+        @if (get_theme_mod('header_UseDarkHeader', true)  == true)
           .show-logo .usa-header {
             background: rgba(27, 27, 27, 0.8) !important;
           }

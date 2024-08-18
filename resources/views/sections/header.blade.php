@@ -1,20 +1,20 @@
 <header class="usa-header{{
-  (get_theme_mod('header_extended') ? ' usa-header--extended' : ' usa-header--basic') . 
-  (get_theme_mod('header_UseDarkHeader') ? ' usa-header--dark' : '') . 
-  (get_theme_mod('header_advanced_ProjectNameAndLogo') ? ' usa-header--advanced-name-logo' : '') . 
-  (get_theme_mod('header_extended') == false && get_theme_mod('header_megamenu') == true ? ' usa-header--megamenu' : '')
+  (get_theme_mod('header_extended', false) ? ' usa-header--extended' : ' usa-header--basic') . 
+  (get_theme_mod('header_UseDarkHeader', true) ? ' usa-header--dark' : '') . 
+  (get_theme_mod('header_advanced_ProjectNameAndLogo', true) ? ' usa-header--advanced-name-logo' : '') . 
+  (get_theme_mod('header_extended', false) == false && get_theme_mod('header_megamenu', false) == true ? ' usa-header--megamenu' : '')
   }}">
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
         <em class="usa-logo__text">
-          @if (get_theme_mod('header_advanced_ProjectNameAndLogo') == true)
+          @if (get_theme_mod('header_advanced_ProjectNameAndLogo', true) == true)
             <a href="{{ esc_url(home_url('/')) }}" accesskey="1" title="Home" aria-label="Home">
-              <img src="{{ get_theme_mod('project_icon') }}" alt="Site logo">
-              <span class="usa-logo-main-text">{{ get_theme_mod('project_line1') }} </span><br/>{{ get_theme_mod('project_line2') }}
+              <img src="{{ get_theme_mod('project_icon', \Roots\asset('images/circle-gray-20.svg')->uri()) }}" alt="Site logo">
+              <span class="usa-logo-main-text">{{ get_theme_mod('project_line1', 'Project') }} </span><br/>{{ get_theme_mod('project_line2', 'Title') }}
             </a>
           @else
-            <a href="{{ esc_url(home_url('/')) }}" title="Home" aria-label="Home">{{ get_theme_mod('project_line1') }} {{ get_theme_mod('project_line2') }}</a>
+            <a href="{{ esc_url(home_url('/')) }}" title="Home" aria-label="Home">{{ get_theme_mod('project_line1', 'Project') }} {{ get_theme_mod('project_line2', 'Title') }}</a>
           @endif
         </em>
       </div>
@@ -22,13 +22,13 @@
     </div>
     <nav aria-label="Primary navigation" class="usa-nav">
       <button type="button" class="usa-nav__close">
-        @if (get_theme_mod('header_UseDarkHeader') == true)
+        @if (get_theme_mod('header_UseDarkHeader', true) == true)
           <img src="@asset('images/usa-icons/close-white.svg')" role="img" alt="Close" />
         @else
           <img src="@asset('images/usa-icons/close.svg')" role="img" alt="Close" />
         @endif
       </button>
-      @if (get_theme_mod('header_megamenu') == false)
+      @if (get_theme_mod('header_megamenu', false) == false)
         @php
           if (has_nav_menu('primary_navigation')) :
             wp_nav_menu(array(
@@ -53,7 +53,7 @@
           endif;
         @endphp
       @endif
-      @if (get_theme_mod('header_extended') == true)
+      @if (get_theme_mod('header_extended', false) == true)
         <div class="usa-nav__secondary">
           @php
             if (has_nav_menu('extended-header-secondary-links')) :

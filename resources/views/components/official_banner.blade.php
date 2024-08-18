@@ -1,14 +1,14 @@
 <section class="usa-banner{{
-  (get_theme_mod('officialBanner_dark') ? ' usa-banner--dark' : '')
-  }}" aria-label="Official website of the {{ get_theme_mod('site_government') }} government">
+  (get_theme_mod('officialBanner_dark', false) ? ' usa-banner--dark' : '')
+  }}" aria-label="Official website of the {{ get_theme_mod('site_government', 'United States') }} government">
   <div class="usa-accordion">
     <header class="usa-banner__header">
       <div class="usa-banner__inner">
         <div class="grid-col-auto">
-          <img aria-hidden="true" class="usa-banner__header-flag" src="{{ get_theme_mod('officialBanner_icon') }}" alt="" />
+          <img aria-hidden="true" class="usa-banner__header-flag" src="{{ get_theme_mod('officialBanner_icon', \Roots\asset('images/us_flag_small.png')->uri()) }}" alt="" />
         </div>
         <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-          <p class="usa-banner__header-text">An official website of the {{ get_theme_mod('site_government') }} government</p>
+          <p class="usa-banner__header-text">An official website of the {{ get_theme_mod('site_government', 'United States') }} government</p>
           <p class="usa-banner__header-action">Here’s how you know</p>
         </div>
         <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
@@ -24,7 +24,7 @@
             <p>
               <strong>Official websites use {{ $tld }}</strong><br />A
               <strong>{{ $tld }}</strong> website belongs to an official government
-              organization in the {{ get_theme_mod('site_government') }}.
+              organization in the {{ get_theme_mod('site_government', 'United States') }}.
             </p>
           </div>
         </div>
