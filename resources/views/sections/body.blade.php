@@ -1,21 +1,22 @@
 <body @php(body_class())>
   <a class="usa-skipnav" href="#main-content" tabindex="2">Skip to main content</a>
-  @if ($header['fixedbox'] == true)
-    <div class="fixed-box--cover"></div>
+  @if (get_theme_mod('header_fixedbox') == true)
+    @if (get_theme_mod('header_enabled') == true)
+      <div class="fixed-box--cover"></div>
+    @endif
     <div class="fixed-box">
   @endif
 
-  @if ($officialBanner['enabled'] == true)
+  @if (get_theme_mod('officialBanner_enabled') == true)
     @include('components.official_banner')
   @endif
-
   @php(do_action('get_header'))
   
-  @if ($header['enabled'] == true)
+  @if (get_theme_mod('header_enabled') == true)
     @include('sections.header')
   @endif
 
-  @if ($header['fixedbox'] == true)</div>@endif
+  @if (get_theme_mod('header_fixedbox') == true)</div>@endif
   <div class="usa-overlay"></div>
 
   @yield('content') 
@@ -27,10 +28,10 @@
   @endif
 
   @php(do_action('get_footer'))
-  @if ($footer['enabled'] == true)
+  @if (get_theme_mod('footer_enabled') == true)
     @include('sections.footer')
   @endif
-  @if ($identifier['enabled'] == true)
+  @if (get_theme_mod('identifier_enabled') == true)
     @include('sections.identifier')
   @endif
   @php(wp_footer())

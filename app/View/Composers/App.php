@@ -23,6 +23,9 @@ class App extends Composer
     public function with() {
 
         $toreturn = array(
+
+            'tld' => '.' . end(explode(".", parse_url('https://' . $_SERVER['SERVER_NAME'], PHP_URL_HOST))),
+
             // Debugging settings
             'debug' => [
                 'templatenames' => false, // If true, will show which template is being loaded (useful for debugging)
@@ -35,7 +38,7 @@ class App extends Composer
                 'enabled' => true, // Whether the header is enabled
                 'advanced_ProjectNameAndLogo' => true, // Show an advanced project name and logo in the header
                 'UseDarkHeader' => true, // Use a dark theme for the header
-                'extended' => false, // Enable the extended navigation menu
+                'extended' => true, // Enable the extended navigation menu
                 'megamenu' => false, // TODO: Implement support for a megamenu
                 'fixedbox' => true, // This will place the header in a fixed box.
                     // ! FLEXBOX MUST BE ENABLED FOR BELOW VALUES ! \\

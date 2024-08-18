@@ -37,6 +37,7 @@ This WordPress theme is based on Sage and integrates the NASA Web Design System 
 - yarn install --production=false
 - yarn build
 - Edit /app/View/Composers/App.php
+- Go to /wp-admin/customize.php and customize
 - Look at //TODO-CONFIG: comments
 
 ## Contributing

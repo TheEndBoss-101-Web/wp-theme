@@ -1,28 +1,28 @@
 <div class="usa-identifier">
   <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier,">
     <div class="usa-identifier__container">
-      @if ($identifier['noLogo'] == false)
+      @if (get_theme_mod('identifier_noLogo') == false)
         <div class="usa-identifier__logos">
-          <a href="{{ $parentagency['website'] }}" class="usa-identifier__logo">
-            <img class="usa-identifier__logo-img" src="{{ $parentagency['logo'] }}" alt="{{ $parentagency['name'] }}'s logo" role="img" />
+          <a href="{{ get_theme_mod('parentagency_website') }}" class="usa-identifier__logo">
+            <img class="usa-identifier__logo-img" src="{{ get_theme_mod('parentagency_logo') }}" alt="{{ get_theme_mod('parentagency_name') }}'s logo" role="img" />
           </a>
-          @if ($identifier['dualParent'] == true)
-            <a href="{{ $parentagency2['website'] }}" class="usa-identifier__logo">
-              <img class="usa-identifier__logo-img" src="{{ $parentagency2['logo'] }}" alt="{{ $parentagency2['name'] }}'s logo" role="img" />
+          @if (get_theme_mod('identifier_dualParent') == true)
+            <a href="{{ get_theme_mod('parentagency2_website') }}" class="usa-identifier__logo">
+              <img class="usa-identifier__logo-img" src="{{ get_theme_mod('parentagency2_logo') }}" alt="{{ get_theme_mod('parentagency2_name') }}'s logo" role="img" />
             </a>
           @endif
         </div>
       @endif
       <section class="usa-identifier__identity" aria-label="Agency description">
-        <p class="usa-identifier__identity-domain">{{ $site['domain'] }}{{ $site['tld'] }}</p>
+        <p class="usa-identifier__identity-domain">{{ $_SERVER['SERVER_NAME'] }}</p>
         <p class="usa-identifier__identity-disclaimer">
           <span aria-hidden="true">An </span>official website of the
-          <a href="{{ $parentagency['website'] }}">{{ $parentagency['name'] }}</a>
-          @if ($identifier['dualParent'] == true)
+          <a href="{{ get_theme_mod('parentagency_website') }}">{{ get_theme_mod('parentagency_name') }}</a>
+          @if (get_theme_mod('identifier_dualParent') == true)
             and the
-            <a href="{{ $parentagency2['website'] }}">{{ $parentagency2['name'] }}</a>
+            <a href="{{ get_theme_mod('parentagency2_website') }}">{{ get_theme_mod('parentagency2_name') }}</a>
           @endif
-          @if ($identifier['taxpayer_disclaimer'] == true)
+          @if (get_theme_mod('identifier_taxpayer_disclaimer') == true)
           . Produced and published at taxpayer expense.
           @endif
         </p>
@@ -67,7 +67,7 @@
     </div>
   </nav>
   @endif
-  @if ($identifier['showusagov'] == true)
+  @if (get_theme_mod('identifier_showusagov') == true)
     <section class="usa-identifier__section usa-identifier__section--usagov" aria-label="U.S. government information and services,">
       <div class="usa-identifier__container">
         <div class="usa-identifier__usagov-description"> Looking for U.S. government information and services? </div>

@@ -20,6 +20,7 @@
   <link rel="shortcut icon" type="image/ico" href="@asset('images/favicons/favicon.ico')" />
   <link rel="icon" type="image/png" href="@asset('images/favicons/favicon.png')" />
 
+  
   <!-- 192x192, as recommended for Android
   http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
   -->
@@ -53,7 +54,7 @@
   
   
   <style>
-    @if ($header['UseDarkHeader'] == true)
+    @if (get_theme_mod('header_UseDarkHeader') == true)
       .fixed-box--cover {
         background-color: rgb(27,27,27);
       }
@@ -62,20 +63,20 @@
         background-color: rgb(27,27,27);
       }
     @endif
-    @if ($header['fixedbox'] == true)
+    @if (get_theme_mod('header_fixedbox') == true)
       .usa-hero {
         padding-top: 2rem;
       }
       html {
         margin-top: 8rem !important;
       }
-      @if ($header['clearBG'] == true)
+      @if (get_theme_mod('header_clearBG') == true)
         .usa-header {
           background: none;
         }
       @endif
-      @if ($header['fadeBG'] == true)
-        @if ($header['UseDarkHeader'] == true)
+      @if (get_theme_mod('header_fadeBG')  == true)
+        @if (get_theme_mod('header_UseDarkHeader')  == true)
           .show-logo .usa-header {
             background: rgba(27, 27, 27, 0.8) !important;
           }

@@ -21,7 +21,7 @@
     </a>
   </div>
   <div class="grid-col-auto">
-    <a class="usa-social-link" href="javascript:void(0);">
+    <a class="usa-social-link" href="{{ esc_url(home_url('/')) }}/feed">
       <img class="usa-social-link__icon" src="@asset('images/usa-icons/rss_feed.svg')" alt="RSS" />
     </a>
   </div>

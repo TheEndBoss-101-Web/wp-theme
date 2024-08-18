@@ -1,20 +1,20 @@
 <header class="usa-header{{
-  ($header['extended'] ? ' usa-header--extended' : ' usa-header--basic') . 
-  ($header['UseDarkHeader'] ? ' usa-header--dark' : '') . 
-  ($header['advanced_ProjectNameAndLogo'] ? ' usa-header--advanced-name-logo' : '') . 
-  ($header['extended'] == false && $header['megamenu'] == true ? ' usa-header--megamenu' : '')
+  (get_theme_mod('header_extended') ? ' usa-header--extended' : ' usa-header--basic') . 
+  (get_theme_mod('header_UseDarkHeader') ? ' usa-header--dark' : '') . 
+  (get_theme_mod('header_advanced_ProjectNameAndLogo') ? ' usa-header--advanced-name-logo' : '') . 
+  (get_theme_mod('header_extended') == false && get_theme_mod('header_megamenu') == true ? ' usa-header--megamenu' : '')
   }}">
   <div class="usa-nav-container">
     <div class="usa-navbar">
       <div class="usa-logo">
         <em class="usa-logo__text">
-          @if ($header['advanced_ProjectNameAndLogo'] == true)
+          @if (get_theme_mod('header_advanced_ProjectNameAndLogo') == true)
             <a href="{{ esc_url(home_url('/')) }}" accesskey="1" title="Home" aria-label="Home">
-              <img src="{{ $project['logo'] }}" alt="Site logo">
-              <span class="usa-logo-main-text">{{ $project['line1'] }} </span><br/>{{ $project['line2'] }}
+              <img src="{{ get_theme_mod('project_icon') }}" alt="Site logo">
+              <span class="usa-logo-main-text">{{ get_theme_mod('project_line1') }} </span><br/>{{ get_theme_mod('project_line2') }}
             </a>
           @else
-            <a href="{{ esc_url(home_url('/')) }}" title="Home" aria-label="Home">{{ $project['name'] }}</a>
+            <a href="{{ esc_url(home_url('/')) }}" title="Home" aria-label="Home">{{ get_theme_mod('project_line1') }} {{ get_theme_mod('project_line2') }}</a>
           @endif
         </em>
       </div>
@@ -22,13 +22,13 @@
     </div>
     <nav aria-label="Primary navigation" class="usa-nav">
       <button type="button" class="usa-nav__close">
-        @if ($header['UseDarkHeader'] == true)
+        @if (get_theme_mod('header_UseDarkHeader') == true)
           <img src="@asset('images/usa-icons/close-white.svg')" role="img" alt="Close" />
         @else
           <img src="@asset('images/usa-icons/close.svg')" role="img" alt="Close" />
         @endif
       </button>
-      @if ($header['megamenu'] == false)
+      @if (get_theme_mod('header_megamenu') == false)
         @php
           if (has_nav_menu('primary_navigation')) :
             wp_nav_menu(array(
@@ -53,7 +53,7 @@
           endif;
         @endphp
       @endif
-      @if ($header['extended'] == true)
+      @if (get_theme_mod('header_extended') == true)
         <div class="usa-nav__secondary">
           @php
             if (has_nav_menu('extended-header-secondary-links')) :

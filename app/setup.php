@@ -134,3 +134,4 @@ require_once 'lib/App/NASAWDS_MedFooter_NavWalker.php';
 require_once 'lib/App/NASAWDS_SlimFooter_NavWalker.php';
 require_once 'lib/App/NASAWDS_Identifier_NavWalker.php';
 require_once 'lib/App/helpers.php';
+require_once 'lib/App/customizer.php';
