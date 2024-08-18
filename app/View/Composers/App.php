@@ -31,6 +31,7 @@ class App extends Composer
                 'templatenames' => false, // If true, will show which template is being loaded (useful for debugging)
             ],
 
+            /*
             'breadCrumsHeroLocation' => true, // True for above false for below.
 
             // Header settings
@@ -105,11 +106,12 @@ class App extends Composer
                 'website' => 'agency2.gov', // Website URL of the second parent agency
                 'logo' => asset('images/circle-gray-20.svg'), // Path to the second parent agency's logo image
             ],
+            */
         );
 
         // ! DO NOT EDIT BELOW ! \\
 
-        $toreturn['header']['clearBG'] = false;
+        //$toreturn['header']['clearBG'] = false;
 
         if ( ! function_exists('get_field') ) {
             echo("<h1>Critical Site Error:</h1>");
