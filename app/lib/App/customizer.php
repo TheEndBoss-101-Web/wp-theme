@@ -37,6 +37,76 @@ function mytheme_customize_register( $wp_customize ) {
         'label'   => __( 'Header in Fixed Box', 'mytheme' ),
     ));
 
+    // Site Alert settings section
+    $wp_customize->add_section( 'sitealert', array(
+        'title'    => __( 'Site Alert', 'mytheme' ),
+        'priority' => 90,
+    ));
+    $wp_customize->add_setting( 'site_alert_enabled', array(
+        'default'   => false,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'site_alert_enabled', array(
+        'type'    => 'checkbox',
+        'section' => 'sitealert',
+        'label'   => __( 'enabled', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'site_alert_type', array(
+        'default'   => false,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'site_alert_type', array(
+        'type'    => 'checkbox',
+        'section' => 'sitealert',
+        'label'   => __( 'Is emergency?', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'stie_alert_noheading', array(
+        'default'   => false,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'stie_alert_noheading', array(
+        'type'    => 'checkbox',
+        'section' => 'sitealert',
+        'label'   => __( 'No heading?', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'stie_alert_slim', array(
+        'default'   => true,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'stie_alert_slim', array(
+        'type'    => 'checkbox',
+        'section' => 'sitealert',
+        'label'   => __( 'Slim', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'stie_alert_noicon', array(
+        'default'   => false,
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'stie_alert_noicon', array(
+        'type'    => 'checkbox',
+        'section' => 'sitealert',
+        'label'   => __( 'No icon', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'site_alert_heading', array(
+        'default'   => 'Short alert message heading',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'site_alert_heading', array(
+        'type'    => 'text',
+        'section' => 'sitealert',
+        'label'   => __( 'Heading', 'mytheme' ),
+    ));
+    $wp_customize->add_setting( 'site_alert_body', array(
+        'default'   => 'Additional context and followup information',
+        'transport' => 'refresh',
+    ));
+    $wp_customize->add_control( 'site_alert_body', array(
+        'type'    => 'text',
+        'section' => 'sitealert',
+        'label'   => __( 'Body', 'mytheme' ),
+    ));
+
+
 
     // Project-related settings section
     $wp_customize->add_section( 'project_section', array(

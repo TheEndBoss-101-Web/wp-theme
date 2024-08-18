@@ -10,8 +10,14 @@
   @if (get_theme_mod('officialBanner_enabled', true) == true)
     @include('components.official_banner')
   @endif
+
+
+  @if (get_theme_mod('site_alert_enabled', false) == true)
+    @include('components.site_alert')
+  @endif
+
   @php(do_action('get_header'))
-  
+
   @if (get_theme_mod('header_enabled', true) == true)
     @include('sections.header')
   @endif
